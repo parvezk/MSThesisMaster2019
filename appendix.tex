@@ -1,0 +1,160 @@
+%
+%  Example Appendix pages.
+%  Modified to use new usu-thesis-mk2 appendix facilities.
+%
+%  Time-stamp: "[appendix.tex] last modified by Scott Budge (scott) on 2011-08-08 (Monday, 8 August 2011) at 15:46:06 on goga"
+%
+%  Info: $Id$   USU
+%  Revision: $Rev$
+% $LastChangedDate$
+% $LastChangedBy$
+%
+%
+% For a single appendix, use \makeappendix, and place the 
+% body of the appendix after it
+
+%\makeappendix
+
+% < single appendix body here >
+
+% For multiple appendices, use \makeappendices, and create each appendix
+% using \appendix{}
+% For sub-appendices use \appendixsection{} and \appendixsubsection{}
+
+\makeappendices
+\appendix{Summary Tables}
+\label{chap:appendix}
+
+
+\appendixsection{VGG16 Model}
+\label{sec:edge-def}
+
+VGG16 Model summary in Table~\ref{table1}.
+
+\begin{table}[!t]
+% increase table row spacing, adjust to taste
+  \renewcommand{\arraystretch}{1.3}
+
+  \caption{List of hidden layers in the convolutional network of VGG16 model}
+  \label{table1}
+
+  \centering
+  \begin{tabular}{|c|c|c|} \hline
+  
+  Layer (type) & Output shape & Param # \\ 
+  \hline
+
+
+    input_1 (InputLayer) & [null,224,224,3] & 0 \\
+    \hline
+    
+    block1 conv1 (Conv2D) & [null,224,224,64] & 1792 \\
+    \hline
+    
+    block1 conv2 (Conv2D) & [null,224,224,64] & 36928 \\
+    \hline
+    
+    
+    block1 pool (MaxPooling2D) & [null,112,112,64] & 0 \\
+    \hline
+    
+    block2 conv1 (Conv2D) & [null,112,112,128] & 73856 \\
+    \hline
+    
+    block2 conv2 (Conv2D) & [null,112,112,128] & 147584 \\
+    \hline
+    
+    block2 pool (MaxPooling2D) & [null,56,56,128] & 0 \\
+    \hline
+    
+    block3 conv1 (Conv2D) & [null,56,56,256] & 295168 \\
+    \hline
+    
+    block3 conv2 (Conv2D) & [null,56,56,256] & 590080 \\
+    \hline
+    
+    block3 conv3 (Conv2D) & [null,56,56,256] & 590080 \\
+    \hline
+    
+    block3 pool (MaxPooling2D) & [null,28,28,256] & 0 \\
+    \hline
+    
+    block4 conv1 (Conv2D) & [null,28,28,512] & 1180160 \\
+    \hline
+    
+    block4_conv2 (Conv2D) & [null,28,28,512] & 2359808 \\
+    \hline
+    
+    block4 conv3 (Conv2D) & [null,28,28,512] & 2359808 \\
+    \hline
+    
+    block4 pool (MaxPooling2D) & [null,14,14,512] & 0 \\
+    \hline
+    
+    block5 conv1 (Conv2D) & [null,14,14,512] & 2359808 \\
+    \hline
+    
+    block5 conv2 (Conv2D) & [null,14,14,512] & 2359808 \\
+    \hline
+    
+    block5 conv3 (Conv2D) & [null,14,14,512] & 2359808 \\
+    \hline
+    
+    block5 pool (MaxPooling2D) & [null,7,7,512] & 0 \\
+    \hline
+    
+    flatten (Flatten) & [null,25088] & 0 \\
+    \hline
+    
+    fc1 (Dense) & [null,4096] & 102764544 \\
+    \hline
+    
+    fc2 (Dense) & [null,4096] & 16781312 \\
+    \hline
+    
+    predictions (Dense) & [null,1000] & 4097000 \\
+    \hline
+
+  \end{tabular}
+
+\end{table}
+
+\linebreak
+\textbf{Total params}: 138357544 \newline
+\textbf{Trainable params}: 138357544 \newline
+\textbf{Non-trainable params}: 138357544 \newline
+
+\begin{table}[!t]
+  \renewcommand{\arraystretch}{1.3}
+  \centering
+
+  \caption{List of edge vectors with b=4 and d=3, for a
+    $4 \times 4$ vector size.}
+  \label{table2}
+
+  \begin{tabular}{|c|c|} \hline
+    Level & Edge Vectors \\ \hline
+
+    & (1)\\
+    L1 & (2)\\
+    & (3) \\ \hline
+
+    L2 & (0,3) \\ \hline
+
+    & (0,2,0)\\
+    L3 & (0,2,2)\\
+    & (0,2,3) \\ \hline
+
+  \end{tabular}
+
+\end{table}
+
+\appendix{Appendix}
+
+%\appendixsection*{Background}
+%\label{sec:back}
+
+%\appendixsection*{Methodologies}
+%\label{sec:meat}
+
+

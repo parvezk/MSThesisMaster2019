@@ -1,0 +1,62 @@
+%
+%  This is an example of how a LaTeX thesis should be formatted.  This
+%  document contains chapter 1 of the thesis.
+%
+\chapter{INTRODUCTION}
+%%%%%%%% This line gets rid of page number on first page of text
+\thispagestyle{empty}
+%%%%%%%%%%%%%
+%It is responsible for spearheading the latest advancement in artificial intelligence research.% 
+
+Deep learning has led to an unprecedented breakthrough in many areas such as computer vision, voice recognition, and autonomous driving.  It has proved very powerful at solving large-scale real-world problems in recent years and adopted by many large-scale information processing applications like image recognition, speech recognition and language translation.  These same techniques will be able to diagnose deadly diseases,  make trading decisions, and do countless other things that will potentially transform many industries. 
+
+While a deep neural network learns efficient and powerful representations, they are often considered as black box methods that perform assigned tasks for the users.  Understanding these models remains a challenge due to its inherently opaque nature and unclear working mechanism.  Without a definite understanding of how and why a model works it is difficult for a user to determine when a model works correctly, when it fails and how it might be improved. As a result, users treat the neural network as a black box and cannot explain how mapping from input to output data was done nor how performance might be improved. This lack of transparency acts as a significant drawback to their application, in practice.
+
+Furthermore, automated decisions made by such models has far-reaching societal implications: widening inequality among class and race and underpinning bias and racial discrimination in automated decision-making system. As a result, transparency and fairness problem has been gaining more attention lately and efforts are being made to make deep learning models more interpretable and controllable by humans,  including building models that can explain their decisions, establish trust and transparency in how they behave in the real-world, detect model bias and for scientific curiosity.
+
+Deep learning models are hard to interpret than most machine learning models as they learn representations that are complicated to extract and present in a human-readable form.  While it is plausible for certain types of models, it is indeed not entirely true for an image recognition model like a convolutional neural network (CNN).  We use a visualization technique to understand neural net inference on a given image.  The representations learned by deep neural net like CNN are highly responsive to visualization, in large part because they are representations of visual concepts.
+
+We build a visual exploration tool that explains the rationale for a classification decision to an end user. The tool jointly predicts a class label,  and shows why the predicted label is appropriate for a given image using visual evidence. Our visualization method covers the following three components:
+
+\begin{itemize}
+\begin{enumerate}
+\iffalse
+\item  \textbf{Visualizing intermediate outputs}: It helps a user understands how successive layers transform their input, and to get an insight into the individual network filters. 
+\fi
+
+\item \textbf{Visualizing network filters}. It is useful to understand clearly what visual pattern or concept each filter in a network is receptive to. 
+
+\item \textbf{Visualizing heatmaps} of class activation in an image. This step is useful to understand which part of an input image attributed most to the classification decision by localizing the object in the image.
+\end{enumerate}
+\end{itemize}
+
+The following section presents chapter 1 that provides historical context and background of deep learning and cursory glance on the origin of neural networks.  Section 2.4 presents an overview of the common architectures.  Section 2.4 discusses the problem of the black box models.  Section 2.5 presents the central claim in a broader context of societal impacts.  Section 2.7 highlights the importance of explainable and interpretable systems.  Chapter 3 presents the methodologies used in the research process, including research hypothesis, experimental setup and the technical design of the prototype.
+
+\footnote{The acronym VQ is used as an abbreviation for both vector quantization and vector
+  quantizer.}
+  
+% TODO: For PATTERNS: Maximally Activating Patches%
+
+%In order to build trust and transparency in these systems, we need better tools and techniques to understand and interpret deep neural networks; techniques to see through the black box models%
+
+%Several methods have been developed to understand what a DNN has learned [17], [18]. In deep learning visualization research, a large body of work is dedicated to visualizing particular neurons or neuron layers [1], [19]–[20][21][22][23][24] and learned parameters, We focus here on methods that visualize the impact of particular regions of a given and fixed single image for a prediction of this image%
+
+%why people want to visualize deep learning is to understand how deep learning models make decisions and what representations they have learned, so we can place trust in a model [60]. This notion of general model understanding has been called the interpretability or explainability when referring to machine learning models%
+
+% s. In order to build trust in intelligent systems and move towards their meaningful integration into our everyday lives, it is clear that we must make ‘transparent’ models that explain why they predict what they predict. 
+%
+
+%interpretation to qualitatively evaluate and support the model’s predictions and create new interpretable methods for deep learning models.%
+
+%with a focus on interpretability. These works use visualization to explain, explore, and debug models in%
+
+%Deep learning models are hard to interpret as they learn representations that are difficult to extract and present in a human-readable form. While this is partially true for certain types of models, it is indeed not true for convolutional neural network (CNN). We use visualization techniques to interpret an image classification task. The representations learned by convnet are highly amenable to visualization, in large part because they are representations of visual concepts.%
+
+% WHILE MOST OTHER WORK look for training phase ans saliency maps%
+
+\iffalse
+It also limits the usage and acceptance of artificial neural networks in applications involving high stake decision making, especially in regulated industries where it is demanded to use techniques that can be understood and validated.
+\fi
+
+
+%What are the intermediate features looking for?%
