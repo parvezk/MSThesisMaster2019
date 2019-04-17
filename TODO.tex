@@ -1,0 +1,75 @@
+CONTENTS TO COVER---------
+
+OVERALL___________________
+CREDIT IMAGES USED
+RECHECK CITATIONS
+DEFINITION | GLOSSARY
+
+
+INTRO____________________
+BACKGROUND_______________
+
+ADD FORMULAE
+
+ELABORATE CNN MODEL STRUCTURE (Base Architecture)
+Image classification [27], object tracking, pose estimation, text detection, visual saliency detection, object detection [16], semantic segmentation [16], image captioning[23, 33, 21], visual question answering [3, 15, 41], action recognition, scene labeling, speech and natural language processing.
+
+[27] A. Krizhevsky, I. Sutskever, and G. E. Hinton. Imagenet classification with deep convolutional neural networks.
+
+[16] [16] R. Girshick, J. Donahue, T. Darrell, and J. Malik. Rich Feature Hi- erarchies for Accurate Object Detection and Semantic Segmentation. In CVPR, 2014.
+
+[23] O. Vinyals, A. Toshev, S. Bengio, and D. Erhan. Show and tell: A neural image caption generator. In CVPR, 2015.
+
+[33] H. Fang, S. Gupta, F. Iandola, R. K. Srivastava, L. Deng, P. Dollár, J. Gao, X. He, M. Mitchell, J. C. Platt, et al. From Captions to Visual Concepts and Back. In CVPR, 2015.
+
+[21] J. Johnson, A. Karpathy, and L. Fei-Fei. DenseCap: Fully Convolu- tional Localization Networks for Dense Captioning. 
+
+[3] S. Antol, A. Agrawal, J. Lu, M. Mitchell, D. Batra, C. Lawrence Zit- nick, and D. Parikh. VQA: Visual Question Answering. In ICCV, 2015.
+
+[15] H. Gao, J. Mao, J. Zhou, Z. Huang, L. Wang, and W. Xu. Are You Talking to a Machine? Dataset and Methods for Multilingual Image Question Answering. In NIPS, 2015.
+
+[41] M. Malinowski, M. Rohrbach, and M. Fritz. Ask your neurons: A neural-based approach to answering questions about images. In ICCV, 2015
+
+ILLUSTRATE VGG16 LAYERS
+
+MODEL CONVERSION
+
+IMAGENET DATABASE (FEI-FEI/UNIV)
+
+BACKPROPAGATION
+The backpropagation algorithm is the standard training method which uses gradient descent to update the parameters.
+
+AI ETHICS
+
+Explainable Artificial Intelligence (XAI)
+DARPA's XAI Initiative
+
+
+METHODS___________________
+Research Hypothesis
+- While deep neural networks learn efficient and powerful representations, they are often considered a ‘black-box’. [VISUAL EXPLANATION PAPER] What are the tools and methods 
+- Visualizing the contributions of individuals nodes in complex networks
+
+BLACK BOX
+- Although there has been some effort recently in the machine learning and human-computer interaction area, (Nguyen, Clune, Bengio, Dosovitskiy, & Yosinski, 2016), most observers would acknowledge that neural networks as a whole remain something of a black box.
+- Users mostly treats a neural network as a black box and cannot explain how learning from input data was done nor how performance can be consistently ensured.
+- Further, traditional post-mortem analysis with machine-learning systems is tricky because of the dizzying array of data involved. Advanced AI algorithms find so many different patterns in data that they leverage to make decisions that it’s known as the “black box” — you know what went in, but you have no idea what patterns were most important to arrive at the solutions that are spit out.
+
+Prototype Objective
+Visual Exploration Tool
+User Interface
+Infrastructure - HPC VM
+
+RESULTS___
+GRAD CAM approach
+
+Visualizing intermediate activations¶
+
+Visualizing intermediate activations consists in displaying the feature maps that are output by various convolution and pooling layers in a network, given a certain input (the output of a layer is often called its "activation", the output of the activation function). This gives a view into how an input is decomposed unto the different filters learned by the network. These feature maps we want to visualize have 3 dimensions: width, height, and depth (channels). Each channel encodes relatively independent features, so the proper way to visualize these feature maps is by independently plotting the contents of every channel, as a 2D image. Let's start by loading the model that we saved in section 5.2:
+
+Visualizing convnet filters
+inspect the filters learned by convnets is to display the visual pattern that each filter is meant to respond to. This can be done with gradient ascent in input space: applying gradient descent to the value of the input image of a convnet so as to maximize the response of a specific filter, starting from a blank input image. The resulting input image would be one that the chosen filter is maximally responsive to.
+
+Visualizing heatmaps of class activation¶
+We will introduce one more visualization technique, one that is useful for understanding which parts of a given image led a convnet to its final classification decision. This is helpful for "debugging" the decision process of a convnet, in particular in case of a classification mistake. It also allows you to locate specific objects in an image.
+This general category of techniques is called "Class Activation Map" (CAM) visualization, and consists in producing heatmaps of "class activation" over input images. A "class activation" heatmap is a 2D grid of scores associated with an specific output class, computed for every location in any input image, indicating how important each location is with respect to the class considered. For instance, given a image fed into one of our "cat vs. dog" convnet, Class Activation Map visualization allows us to generate a heatmap for the class "cat", indicating how cat-like different parts of the image are, and likewise for the class "dog", indicating how dog-like differents parts of the image are.
