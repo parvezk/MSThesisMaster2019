@@ -17,6 +17,13 @@ Not very long ago, to say that computer vision could compete with the visual abi
 
 What is fuelling these advances is the recent surge in data and the rise in computing power over the past few years, which has led to breakthroughs in the field of machine learning and deep learning.
 
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1\textwidth]{images/bg-3-power.png}
+\caption{Three factors driving advancement in machine learning}
+\label{3-factors}
+\end{figure}
+
 \subsection{Data Upsurge}
 The exponential growth in data in recent times has fueled machine learning based industries, technologies, and services. Nonetheless, humans and machines are generating more data today than ever before. Every day, humans alone produce a massive amount of data ranging from text, audio, video, sensory data and more, and that number is expected to proliferate in the decades to come. 
 
@@ -91,13 +98,12 @@ Deep learning \cite{Polson2018} is a specific set of techniques from the broader
 
 Now that we have seen various components of deep networks, this section gives a general overview of the four significant architectures of deep networks.
 
-We broadly survey the types of neural network to provide general insight and take a look at the four major architecture of deep networks that are used in industry and academia: 
+We broadly survey the types of neural network to provide general insight and take a look some of the major vision based architecture of deep neural networks with application in industry and academia. 
 
 \begin{itemize}
 \item Perceptron
 \item  Multi-layered Perceptron
 \item Convolutional Neural Networks (CNN)
-\item Recurrent Neural Networks
 \item AutoEncoders (Unsupervised Pretrained Networks)
 \end{itemize}
 
@@ -107,7 +113,10 @@ A neural network is a highly parametrized model \cite{efron2016computer}, inspir
 
 \subsubsection*{Single Layer Perceptrons}
 
-Perceptron Model is illustrated in Fig.~\ref{fig:perceptron}.
+A single-layer perceptron or feed-forward neural network is a collection of neurons arranged in a sequence of multiple layers, where each neuron receive as input from the previous layer and perform a simple calculation (e.g., compute a weighted sum of the input followed by a nonlinear activation function) \cite{efron2016computer}. The neurons of the network collectively perform a nonlinear mapping from the input data to the output data. This mapping feature is learned from the data by adjusting and adapting the weights of each neuron using a technique called backpropagation \cite{efron2016computer}.
+
+Perceptron structure is illustrated in Fig.~\ref{fig:perceptron}.
+
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.6\textwidth]{images/perceptron.png}
@@ -117,7 +126,20 @@ Perceptron Model is illustrated in Fig.~\ref{fig:perceptron}.
 
 \subsubsection*{Multi Layer Perceptrons}
 
-A feed-forward neural network is a collection of neurons arranged in a sequence of multiple layers, where each neuron receive as input from the previous layer and perform a simple calculation (e.g., compute a weighted sum of the input followed by a nonlinear activation function) \cite{efron2016computer}. The neurons of the network collectively perform a nonlinear mapping from the input data to the output data. This mapping feature is learned from the data by adjusting and adapting the weights of each neuron using a technique called backpropagation \cite{efron2016computer}.
+Figure 2.2 shows a simple example of a feed-forward neural network diagram. There are four predictors or inputs, five hidden units and a single output unit:
+
+\begin{equation}
+a_{l} =g\left( w^{( 1)}_{l0} +\sum\nolimits ^{4}_{j=1} w^{( 1)}_{lj} x^{j}\right)
+\label{four input units and five hidden units}
+\end{equation}
+
+The hidden layer derives transformations of the
+inputs—nonlinear transformations of linear combinations—which are then used to model the output, and there is a single output unit:
+
+\begin{equation}
+ o=h\left( w^{( 2)}_{0} +\sum\nolimits ^{5}_{l=1} w^{( 2)}_{l} a_{l}\right)
+ \label{single output units}
+\end{equation}
 
 Feed Forward Neural Network Fig.~\ref{fig:multi-layer}.
 \begin{figure}[htbp]
@@ -127,16 +149,16 @@ Feed Forward Neural Network Fig.~\ref{fig:multi-layer}.
 \label{fig:multi-layer}
 \end{figure}
 
-% TODO: ANN equations, weight calculation, activation units %
+\clearpage
 
 \subsection{Convolutional Neural Networks}
 A convolutional neural network (CNN) is an image classification network in which the network preserves the hierarchical structure by learning internal feature representations and generalizing the features in tasks like object recognition and other computer vision problems. It is not restricted to images but also applicable for audio, speech and language processing problems \cite{Manaswi2018}.
 
-An example of convolutional neural network Fig.~\ref{fig:CNN-1}.
+An example of Convolutional Neural Network Fig.~\ref{fig:CNN-1}.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.7\textwidth]{images/CNN.png}
-\caption{Convolutional Neural Network and computer vision}
+\caption{Example.1}
 \label{fig:CNN-1}
 \end{figure}
 
@@ -146,7 +168,7 @@ Fig.~\ref{fig:CNN-1}.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.7\textwidth]{images/cnn-architecture.png}
-\caption{CNN Architecture}
+\caption{Convoltional Neural Network Architecture}
 \label{fig:CNN-1}
 \end{figure}
 
@@ -249,6 +271,12 @@ XAI concept explains individual decisions, enables understanding of overall stre
 \caption{Emphasis and Scope of XAI Research}
 \label{fig:xai-1}
 \end{figure}
+XAI will create a suite of machine learning techniques that • Produce more explainable models, while maintaining a high level of learning performance (e.g., prediction accuracy)
+• Enable human users to understand, appropriately trust, and effectively manage the emerging generation of artificially intelligent partners
+
+>>>(image) Explanation framework
+>>>[SELF image]The Need for Explainable AI
+>>>What Are We Trying To Do?
 
 Explainable Artificial Intelligence (XAI) System:  There has been a wave of interest in explainable artificial intelligence (XAI) in recent years driven by DARPA’s initiative to fund XAI projects. Historically, there has been occasional interest in explanations of intelligent systems and automated decision making systems over the past decades with expert systems, designed to solve complex problems by reasoning through prior knowledge in the 1970s [165, 172], Bayesian networks and artificial neural networks [6] in the 1980s, and then the recommender systems in the 2000s [33, 81]. The recent successes and advancement of AI and machine learning for many large-scale applications and the use of increasingly complex and non-transparent algorithms, mainly deep learning, calls for another rise of interest for the need to better understand these systems.
 

@@ -6,8 +6,11 @@ RECHECK CITATIONS
 DEFINITION | GLOSSARY
 
 
-INTRO____________________
-BACKGROUND_______________
+\textbf{INTRODUCTION}======================================
+
+\textbf{BACKGROUND}======================================
+
+Related Work (Optional)
 
 ADD FORMULAE
 
@@ -34,6 +37,12 @@ Image classification [27], object tracking, pose estimation, text detection, vi
 
 [41] M. Malinowski, M. Rohrbach, and M. Fritz. Ask your neurons: A neural-based approach to answering questions about images. In ICCV, 2015
 
+CNN
+NEURON  and ANN comparision
+IMAGE 1 and 2 FOOTNOTE
+Different Layers in a CNN / CNN Architecture (image from CASI book)
+FORMULAE
+
 ILLUSTRATE VGG16 LAYERS
 
 MODEL CONVERSION
@@ -43,47 +52,94 @@ IMAGENET DATABASE (FEI-FEI/UNIV)
 BACKPROPAGATION
 The backpropagation algorithm is the standard training method which uses gradient descent to update the parameters.
 
-AI ETHICS [EXPAND]
-
-WHY INTERPRETABILITY MATTERS
-What makes a good visual explanation? Consider...
-
-STATE BELOW SCENARIO
-\iffalse
-The 2017 report from the AI committee of the British parliament states that the development of the intelligence AI systems is a fundamental necessity if an AI system is to become an integral and trusted tool in the society. Whether it takes the shape of explainability, technological transparency or both depend on the context and stakes involved in its application. However, in most cases, the report ascertains, explainability to be a useful approach for the citizens and the consumers. Further, the report suggests that it is not acceptable to implement an artificial intelligence system that could have a substantial impact on an individual's life unless it can provide a full, comprehensive and satisfactory explanation for the decisions it makes. It means delaying their deployment for such use cases until a credible alternative solution is found.
-\fi
-
-EXPLAINABLE ARTIFICIAL INTELLIGENCE (XAI)
-DARPA's XAI INITIATIVE
-
-
-
-
-METHODS___________________
-Research Hypothesis
-- While deep neural networks learn efficient and powerful representations, they are often considered a ‘black-box’. [VISUAL EXPLANATION PAPER] What are the tools and methods 
-- Visualizing the contributions of individuals nodes in complex networks
+\textbf{INTERPRETABILITY}
 
 BLACK BOX
 - Although there has been some effort recently in the machine learning and human-computer interaction area, (Nguyen, Clune, Bengio, Dosovitskiy, & Yosinski, 2016), most observers would acknowledge that neural networks as a whole remain something of a black box.
 - Users mostly treats a neural network as a black box and cannot explain how learning from input data was done nor how performance can be consistently ensured.
 - Further, traditional post-mortem analysis with machine-learning systems is tricky because of the dizzying array of data involved. Advanced AI algorithms find so many different patterns in data that they leverage to make decisions that it’s known as the “black box” — you know what went in, but you have no idea what patterns were most important to arrive at the solutions that are spit out.
 
-Prototype Objective
-Visual Exploration Tool
-User Interface
+WHY INTERPRETABILITY MATTERS
+Definitions of interpretability center around human understanding, but they vary in the aspect of the model to be understood: its internals [11], operations [4], mapping of data [28], or representation [37]. Although recent work has begun to operationalize interpretability [15], a formal, agreed-upon definition remains open [7, 22].
+
+Loc- approach like CAM are highly class-discriminative, exclusively highlights the object regions, localizing target objects in scenes
+
+As a result, important regions of the image which correspond
+to any decision of interest are visualized in high-resolution
+detail even if the image contains evidence for multiple possible concepts
+
+STATE BELOW SCENARIO
+The 2017 report from the AI committee of the British parliament states that the development of the intelligence AI systems is a fundamental necessity if an AI system is to become an integral and trusted tool in the society. Whether it takes the shape of explainability, technological transparency or both depend on the context and stakes involved in its application. However, in most cases, the report ascertains, explainability to be a useful approach for the citizens and the consumers. Further, the report suggests that it is not acceptable to implement an artificial intelligence system that could have a substantial impact on an individual's life unless it can provide a full, comprehensive and satisfactory explanation for the decisions it makes. It means delaying their deployment for such use cases until a credible alternative solution is found.
+
+EXPLAINABLE ARTIFICIAL INTELLIGENCE (XAI)
+DARPA's XAI INITIATIVE
+
+\textbf{METHODOLOGY}=====================================
+\textbf{Research Hypothesis}
+- While deep neural networks learn efficient and powerful representations, they are often considered a ‘black-box’. [VISUAL EXPLANATION PAPER] What are the tools and methods 
+- Visualizing the contributions of individuals nodes in complex networks
+
+\textbf{PLEASE REFER RED HIGHLIGHTS IN PAPER CAM - approach + 2 pts}
+
+\textbf{DESIGN GOALS} / Prototype Objective
+
+VGG16: (CNN) that achieves top-5 accuracy of 89.5% on the ImageNet dataset that contains over 1.2 millions images across 1000 classes.
+
+APPROACH: SENSITVITY ANALYSIS using HEATMAP Concept
+Get visual interpretation of which parts of the image more most
+ *    responsible for a convnet's classification decision, using the
+ *    gradient-based class activation map (CAM) method.
+ 
+ \textbf{SYSTEM DESIGN}
+ \textbf{Web-based / Experimental setup}
+ Remove Tensorflow.js
+ - Interactive interface to visualize classes attribution graphs of a model....
+ - Deployment using cross-platform, lightweight web technologies...
 Infrastructure - HPC VM
 
-RESULTS___
-WE USE localization approaches like CAM APPROACH ONLY + ....
+ \textbf{PROTOTYPE - DeepViz User InterfaceVision Objective, Motivation}
 
-Visualizing intermediate activations¶
+Vision:  Visual Exploration Tool - Explanatory Graph of Attribution Map / Activations
+A visual exploration tool targeted towards non-technical audience
+A visual narrative of the inference process
 
-Visualizing intermediate activations consists in displaying the feature maps that are output by various convolution and pooling layers in a network, given a certain input (the output of a layer is often called its "activation", the output of the activation function). This gives a view into how an input is decomposed unto the different filters learned by the network. These feature maps we want to visualize have 3 dimensions: width, height, and depth (channels). Each channel encodes relatively independent features, so the proper way to visualize these feature maps is by independently plotting the contents of every channel, as a 2D image. Let's start by loading the model that we saved in section 5.2:
+- A visual exploration tool to explore the inference made by an image recognition model
+- Provide rationale for decision made by the model
+- Help users distill large, complex neural network models into compact, interactive graph visualizations
 
-Visualizing convnet filters
-inspect the filters learned by convnets is to display the visual pattern that each filter is meant to respond to. This can be done with gradient ascent in input space: applying gradient descent to the value of the input image of a convnet so as to maximize the response of a specific filter, starting from a blank input image. The resulting input image would be one that the chosen filter is maximally responsive to.
+A visual exploration tool to interpret class predictions
+Show builds up its understanding of images over many layers
 
-Visualizing heatmaps of class activation¶
-We will introduce one more visualization technique, one that is useful for understanding which parts of a given image led a convnet to its final classification decision. This is helpful for "debugging" the decision process of a convnet, in particular in case of a classification mistake. It also allows you to locate specific objects in an image.
-This general category of techniques is called "Class Activation Map" (CAM) visualization, and consists in producing heatmaps of "class activation" over input images. A "class activation" heatmap is a 2D grid of scores associated with an specific output class, computed for every location in any input image, indicating how important each location is with respect to the class considered. For instance, given a image fed into one of our "cat vs. dog" convnet, Class Activation Map visualization allows us to generate a heatmap for the class "cat", indicating how cat-like different parts of the image are, and likewise for the class "dog", indicating how dog-like differents parts of the image are.
+Motivated by notions of interpretability and assessing trust in models, we evaluate DeepViz via human studies to show that they can be important tools for users to evaluate and place trust in automated systems.
+
+Our approach is weakly supervised localization in context of CNN: where the task is to localize objects in images using only whole image/video frame class labels
+
+Our goal is to build an interactive visualization tool for users to better
+understand how neural networks build their hierarchical representation.
+
+
+  The header of SUMMIT displays metadata about the image clas-
+fication model being visualized, such as the model and dataset name, the number of classes, and the total number data instances within the dataset.
+
+\textbf{RESULTS}============================================
+
+\textbf{GITHUB CODE BASE}
+
+For image classification, our visualizations help identify dataset bias () and lend insight into failures of current CNNs, showing that seemingly unreasonable predictions have reasonable explanations. For
+
+We conduct user testing that show CAM explanation are class discriminative, and not only gelp  human establish trust, but also help untrained users successfully discern a stronger network from a weaker, even when both make identical predictions
+
+TRUST: Thus our viz can help users place trust in a model that can localize better, just based on individual prediction explanations.
+
+Viz helps accurately explain the function learned by the model.
+
+DETECT BIAS: This experiment demonstrates that Grad-CAM can
+help detect and remove biases in datasets, which is impor-tant not just for generalization, but also for fair and ethical
+outcomes as more algorithmic decisions are made in society.
+
+\textit{REFER HIGHLIGHTS FROM GRAD-CAM PAPER}
+
+\textit{CONCLUSION PART OF THE FEATURE VIZ ARTICLE}
+
+
+
