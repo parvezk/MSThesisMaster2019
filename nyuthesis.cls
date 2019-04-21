@@ -129,6 +129,9 @@
 %\usepackage{natbib}
 %\bibliographystyle{abbrvnat}
 
+\usepackage{svg}
+\usepackage{amsmath}
+
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{usuthesis}[2016/07/28 Revised USU thesis class]
 

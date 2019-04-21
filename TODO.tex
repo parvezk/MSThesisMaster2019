@@ -5,74 +5,13 @@ CREDIT IMAGES USED
 RECHECK CITATIONS
 DEFINITION | GLOSSARY
 
-
 \textbf{INTRODUCTION}======================================
 
 \textbf{BACKGROUND}======================================
 
-Related Work (Optional)
-
-ADD FORMULAE
-
-ELABORATE CNN MODEL STRUCTURE (Base Architecture)
-
-The broader range of CNN model families: (1) CNNs with fully-connected layers (e.g. VGG), (2) CNNs used for structured outputs (e.g. captioning), (3) CNNs used in tasks with multi-modal inputs (e.g. VQA) or reinforcement learning.
-
-
-Image classification [27], object tracking, pose estimation, text detection, visual saliency detection, object detection [16], semantic segmentation [16], image captioning[23, 33, 21], visual question answering [3, 15, 41], action recognition, scene labeling, speech and natural language processing.
-
-[27] A. Krizhevsky, I. Sutskever, and G. E. Hinton. Imagenet classification with deep convolutional neural networks.
-
-[16] [16] R. Girshick, J. Donahue, T. Darrell, and J. Malik. Rich Feature Hi- erarchies for Accurate Object Detection and Semantic Segmentation. In CVPR, 2014.
-
-[23] O. Vinyals, A. Toshev, S. Bengio, and D. Erhan. Show and tell: A neural image caption generator. In CVPR, 2015.
-
-[33] H. Fang, S. Gupta, F. Iandola, R. K. Srivastava, L. Deng, P. Dollár, J. Gao, X. He, M. Mitchell, J. C. Platt, et al. From Captions to Visual Concepts and Back. In CVPR, 2015.
-
-[21] J. Johnson, A. Karpathy, and L. Fei-Fei. DenseCap: Fully Convolu- tional Localization Networks for Dense Captioning. 
-
-[3] S. Antol, A. Agrawal, J. Lu, M. Mitchell, D. Batra, C. Lawrence Zit- nick, and D. Parikh. VQA: Visual Question Answering. In ICCV, 2015.
-
-[15] H. Gao, J. Mao, J. Zhou, Z. Huang, L. Wang, and W. Xu. Are You Talking to a Machine? Dataset and Methods for Multilingual Image Question Answering. In NIPS, 2015.
-
-[41] M. Malinowski, M. Rohrbach, and M. Fritz. Ask your neurons: A neural-based approach to answering questions about images. In ICCV, 2015
-
-CNN
-NEURON  and ANN comparision
-IMAGE 1 and 2 FOOTNOTE
-Different Layers in a CNN / CNN Architecture (image from CASI book)
-FORMULAE
-
-ILLUSTRATE VGG16 LAYERS
-
+DNN: NEURON  and ANN COMPARISON
+CNN: IMAGE 1 and 2 FOOTNOTE
 MODEL CONVERSION
-
-IMAGENET DATABASE (FEI-FEI/UNIV)
-
-BACKPROPAGATION
-The backpropagation algorithm is the standard training method which uses gradient descent to update the parameters.
-
-\textbf{INTERPRETABILITY}
-
-BLACK BOX
-- Although there has been some effort recently in the machine learning and human-computer interaction area, (Nguyen, Clune, Bengio, Dosovitskiy, & Yosinski, 2016), most observers would acknowledge that neural networks as a whole remain something of a black box.
-- Users mostly treats a neural network as a black box and cannot explain how learning from input data was done nor how performance can be consistently ensured.
-- Further, traditional post-mortem analysis with machine-learning systems is tricky because of the dizzying array of data involved. Advanced AI algorithms find so many different patterns in data that they leverage to make decisions that it’s known as the “black box” — you know what went in, but you have no idea what patterns were most important to arrive at the solutions that are spit out.
-
-WHY INTERPRETABILITY MATTERS
-Definitions of interpretability center around human understanding, but they vary in the aspect of the model to be understood: its internals [11], operations [4], mapping of data [28], or representation [37]. Although recent work has begun to operationalize interpretability [15], a formal, agreed-upon definition remains open [7, 22].
-
-Loc- approach like CAM are highly class-discriminative, exclusively highlights the object regions, localizing target objects in scenes
-
-As a result, important regions of the image which correspond
-to any decision of interest are visualized in high-resolution
-detail even if the image contains evidence for multiple possible concepts
-
-STATE BELOW SCENARIO
-The 2017 report from the AI committee of the British parliament states that the development of the intelligence AI systems is a fundamental necessity if an AI system is to become an integral and trusted tool in the society. Whether it takes the shape of explainability, technological transparency or both depend on the context and stakes involved in its application. However, in most cases, the report ascertains, explainability to be a useful approach for the citizens and the consumers. Further, the report suggests that it is not acceptable to implement an artificial intelligence system that could have a substantial impact on an individual's life unless it can provide a full, comprehensive and satisfactory explanation for the decisions it makes. It means delaying their deployment for such use cases until a credible alternative solution is found.
-
-EXPLAINABLE ARTIFICIAL INTELLIGENCE (XAI)
-DARPA's XAI INITIATIVE
 
 \textbf{METHODOLOGY}=====================================
 \textbf{Research Hypothesis}
@@ -82,6 +21,11 @@ DARPA's XAI INITIATIVE
 \textbf{PLEASE REFER RED HIGHLIGHTS IN PAPER CAM - approach + 2 pts}
 
 \textbf{DESIGN GOALS} / Prototype Objective
+Localization approach like CAM are highly class-discriminative, exclusively highlights the object regions, localizing target objects in scenes
+
+As a result, important regions of the image which correspond
+to any decision of interest are visualized in high-resolution
+detail even if the image contains evidence for multiple possible concepts
 
 VGG16: (CNN) that achieves top-5 accuracy of 89.5% on the ImageNet dataset that contains over 1.2 millions images across 1000 classes.
 

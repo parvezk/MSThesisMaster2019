@@ -33,44 +33,42 @@ While deep neural networks learn efficient and powerful representations, they ar
 
 \section{Hypothesis Testing}
 
-Building upon our research question stated in the above section; we formulated our hypothesis as follows -  Develop a prototype that serves a set of utilities or toolkit for interpreting a visual classifier by providing visual evidence for their decision using interactive visualization.
+<REWRITE> Building upon our research question stated in the above section; we formulated our hypothesis as follows -  Develop a prototype that serves a set of utilities or toolkit for interpreting a visual classifier by providing visual evidence for their decision using interactive visualization.
 
 \section{Prototype Objective}
 
-The prototype is intended and designed for people with a non-technical background to understand the fundamental concepts of the neural network, in our case, a visual classifier. Our objective can be summarized mainly as (1) Explanation of neural networks for people with a non-computer science background (2) Inspire curiosity and learning among non-technical audiences  (3) Broadens people's access to interactive tools for deep learning.
+<REWRITE> The prototype is intended and designed for people with a non-technical background to understand the fundamental concepts of the neural network, in our case, a visual classifier. Our objective can be summarized mainly as (1) Explanation of neural networks for people with a non-computer science background (2) Inspire curiosity and learning among non-technical audiences  (3) Broadens people's access to interactive tools for deep learning.
 
 \section{Technical Design}
 The following segment provides an overview of the technical design and resources required for the successful development of the prototype. It provides a high-level overview of the components in scope, functionality, dataset and environmental setup.
 
 \subsection{Model Selection}
 
-As model selection is the centerpiece of the data science workflow, we evaluated a set of candidate pre-trained models by running a series of the experiment. It mainly helped us assess if the data collected is well suited to the problem of model selection. We also considered the hyperparameter setting and other configuration details required to fit the model. We also tested the compatibility of the model with the available public dataset. Based on our evaluation we selected VGG-16 as the primary model for the prototype development. This model is trained on the imagenet database.
+<REWRITE> As model selection is the centerpiece of the data science workflow, we evaluated a set of candidate pre-trained models by running a series of the experiment. It mainly helped us assess if the data collected is well suited to the problem of model selection. We also considered the hyperparameter setting and other configuration details required to fit the model. We also tested the compatibility of the model with the available public dataset. Based on our evaluation we selected VGG-16 as the primary model for the prototype development. This model is trained on the imagenet database.
 
-%TODO: Mention and other models to be used%
+VGG-16 is based on convolutional neural network model proposed by the Visual Geometry Group from the University of Oxford in the paper “Very Deep Convolutional Networks for Large-Scale Image Recognition”.  The model achieves 92.7\% top-5 test accuracy in ImageNet, which is a dataset of over 14 million images belonging to 1000 classes. It was one of the famous model submitted to ILSVRC-2014 competiton. This is used as the backbone network in our project.
 
-%\hiddensubsection{Model VGG-16}%
-
-VGG16 is a model based on convolutional neural network architecture. It's a Keras Model pre-trained on the ImageNet database. Its network comprises 16 layers, built using convolutional layer, max pooling layer and the fully connected layer at the end.  It is titled after the Visual Geometry Group from the University of Oxford. 
-
-A list of hidden layers in VGG16 Model.~\ref{fig:CNN-1}.
+A schematic of Visual Geometry Group 16 Model.~\ref{fig:CNN-1}.
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=1\textwidth]{images/vgg-hidden-layers.png}
+\includegraphics[width=1\textwidth]{images/cnn-vgg16-1.png}
 \caption{VGG16 hidden layers}
 \label{fig:CNN-1}
 \end{figure}
 
-VGGNet is a widely popular network, with its most popular version being VGG16. VGG16 has 16 layers which include input, output and hidden layers.
+\subsection{Dataset}
+
+ImageNet database consist of over 15 million labeled high-resolution images that belong to roughly 22,000 categories. These images were downloaded from Google image search and labeled by humans using Amazon's Mechanical Turk crowd-sourcing tool in 2012. It took about two and half years to label all the images. The labeled dataset was first introduced in a competition called the ImageNet Large-Scale Visual Recognition Challenge (ILSVRC). The competition used a subset of ImageNet with around 1000 images in each of 1000 categories. In total, there are 1.2 million training images, 50,000 validation images, and 150,000 testing images. To maintain consistency of resolution, images have been down-sampled to a fixed resolution of 256x256 dimensions.
     
 \subsection{Framework Selection}
 
-To develop client-side deep learning application, we surveyed several open source machine learning framework for the web such as TensorFlow, Keras, PyTorch, Caffe and WebDNN. Based on our assessment and feedback from the developer community, we found TensorFlow.js as a right choice for training and inference of deep learning models on the browser. Additionally, Tensorflow.js is feature-rich and takes advantage of GPU-accelerated training processes. 
+<REWRITE> To develop client-side deep learning application, we surveyed several open source machine learning framework for the web such as TensorFlow, Keras, PyTorch, Caffe and WebDNN. Based on our assessment and feedback from the developer community, we found TensorFlow.js as a right choice for training and inference of deep learning models on the browser. Additionally, Tensorflow.js is feature-rich and takes advantage of GPU-accelerated training processes. 
 
-We use TensorFlow and TensorFlow.js library, released by Google in Mar. 2018 is an in-browser open source machine learning framework that supports defining, training and running deep learning models in the browser using JavaScript (JS). It is the successor of the deeplearn.js which is now called TensorFlow.js Core. 
+<REWRITE> We use TensorFlow and TensorFlow.js library, released by Google in Mar. 2018 is an in-browser open source machine learning framework that supports defining, training and running deep learning models in the browser using JavaScript (JS). It is the successor of the deeplearn.js which is now called TensorFlow.js Core. 
 
-While several other open source JS platforms for machine learning have appeared in recent past, to our knowledge, TensorFlow.js is commonly used and have enabled developers to create interactive and explorable explanations for deep learning models on the web.
+<REWRITE> While several other open source JS platforms for machine learning have appeared in recent past, to our knowledge, TensorFlow.js is commonly used and have enabled developers to create interactive and explorable explanations for deep learning models on the web.
 
-TensorFlow.js leverages GPU processing power to accelerate deep learning tasks on browsers via WebGL. WebGL is a back-end compute on GPU by WebGL API, which is a JavaScript API for rendering interactive 2D and 3D graphics within any modern compatible browsers. TensorFlow.js provides a low-level core API to perform linear algebra operations and automatic differentiation, and high-level Layers APIs for building and training models. The layers used in Tensorflow.js support the Tensorflow and Keras layers in the native platform. Supported features also include conversion of models built in the native platform, importing pre-trained models for inference and retraining imported models.
+<REWRITE> TensorFlow.js leverages GPU processing power to accelerate deep learning tasks on browsers via WebGL. WebGL is a back-end compute on GPU by WebGL API, which is a JavaScript API for rendering interactive 2D and 3D graphics within any modern compatible browsers. TensorFlow.js provides a low-level core API to perform linear algebra operations and automatic differentiation, and high-level Layers APIs for building and training models. The layers used in Tensorflow.js support the Tensorflow and Keras layers in the native platform. Supported features also include conversion of models built in the native platform, importing pre-trained models for inference and retraining imported models.
 
 \subsection{Visual Exploration Tool}
 
@@ -84,7 +82,7 @@ On the other hand, advocates think that the browser is an ideal platform for rea
 
 \section{Computational Environment}
 
-\subsection{Client-side Neural Network Structure}
+\subsection{Client-side Neural Network Overview}
 Developing AI applications using modern deep learning framework is a non-trivial task. Normally these frameworks and libraries are leveraged by native applications that run on a native platform environment such as Linux, Windows, MacOS/iOS and Android. Thus most production-level libraries are developed for and written in Python, Java and C++. 
 
 Developing AI application that is cross-platform and portable on multiple devices is not easy. The development of a native application is an intricate and time-consuming process. It is particularly complicated for mobile applications as the app vendors usually need to develop and maintain both iOS and Android version, in addition to the desktop application.
