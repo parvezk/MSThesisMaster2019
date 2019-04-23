@@ -19,18 +19,16 @@ Deep learning models are hard to interpret than most machine learning models as 
 
 We build a visual exploration tool that explains the rationale for a classification decision to an end user. The tool jointly predicts a class label,  and shows why the predicted label is appropriate for a given image using visual evidence. Our visualization method covers the following three components:
 
-\begin{itemize}
+
 \begin{enumerate}
 \item \textbf{Visualizing  Sensitivity} of class activation in an image. This step is useful to understand which part of an input image attributed most to the classification decision by localizing the object in the image.
 
-\item \textbf{Visualizing network filters} to show what visual pattern or concept each filter in a network is receptive to.
+%\item \textbf{Visualizing filters} to show what visual pattern or concept each filter in a network is receptive to.
 
-\iffalse
 \item  \textbf{Visualizing intermediate outputs}: It helps a user understands how successive layers transform their input, and to get an insight into the individual network filters.
-\fi
 
 \end{enumerate}
-\end{itemize}
+
 
 The following section presents chapter 1 that provides historical context and background of deep learning and cursory glance on the origin of neural networks.  Section 2.4 presents an overview of the common architectures.  Section 2.4 discusses the problem of the black box models.  Section 2.5 presents the central claim in a broader context of societal impacts.  Section 2.7 highlights the importance of explainable and interpretable systems.  Chapter 3 presents the methodologies used in the research process, including research hypothesis, experimental setup and the technical design of the prototype.
 

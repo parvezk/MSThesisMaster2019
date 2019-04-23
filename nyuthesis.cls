@@ -1,11 +1,11 @@
-%  -- usuthesis --
+%  -- nyuthesis --
 % 
 %  A LaTeX class for the preparation of USU thesis' and dissertations.
 % 
-%  Time-stamp: "[usuthesis.cls] last modified by Scott Budge (scott) on 2019-01-17 (Thursday, 17 January 2019) at 16:23:44 on goga.ece.usu.edu"
+%  Time-stamp: "[nyuthesis.cls] last modified by Scott Budge (scott) on 2019-01-17 (Thursday, 17 January 2019) at 16:23:44 on goga.ece.usu.edu"
 %
 %
-%  Info: $Id: usuthesis.cls 1116 2019-01-17 23:29:18Z scott $   USU
+%  Info: $Id: nyuthesis.cls 1116 2019-01-17 23:29:18Z scott $   USU
 %  Revision: $Rev: 1116 $
 % $LastChangedDate: 2019-01-17 16:29:18 -0700 (Thu, 17 Jan 2019) $
 % $LastChangedBy: scott $
@@ -36,7 +36,7 @@
 %    - 12pt
 %%
 %    Options example:
-%      \documentclass[ee,msthesis]{usuthesis}
+%      \documentclass[ee,msthesis]{nyuthesis}
 %
 %  --- Bug Reports ---
 %
@@ -47,7 +47,7 @@
 %
 %  --- Origins ---
 %
-%  Based on Lili Ma's modifications to version 1.6 of the original usuthesis
+%  Based on Lili Ma's modifications to version 1.6 of the original nyuthesis
 %  class maintained by Dr. Scott Budge and Dr. Todd Moon. That class was in 
 %  turn based on a combination of the standard LaTeX book.cls, and a thesis
 %  style file originating at Colorado State University. Also makes use of a
@@ -57,7 +57,7 @@
 %  --- Notes ---
 %
 %  Setting the line spacing for the frontmatter to singlespaced is legacy from
-%  the original usuthesis.sty. At some point it would be nice to change it,
+%  the original nyuthesis.sty. At some point it would be nice to change it,
 %  since so much of the frontmatter seems to actually be doublespaced. But I'm
 %  afraid that transition would require a lot of tinkering with the vspace's
 %  and vskip's scattered throughout the frontmatter sections. I don't really
@@ -133,7 +133,7 @@
 \usepackage{amsmath}
 
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{usuthesis}[2016/07/28 Revised USU thesis class]
+\ProvidesClass{nyuthesis}[2019/04/223 Revised NYU thesis class]
 
 %{{{ A handy macro for debugging: \IW{ <x> } will write <x> to the console
 % This idea from Mark Senn's puthesis.cls
@@ -184,7 +184,7 @@
 %}}}
 
 %{{{ Options that we don't want to see
-\newcommand{\@@classname}{usuthesis}
+\newcommand{\@@classname}{nyuthesis}
 
 \DeclareOption{notitlepage}
     {\ClassWarning{\@@classname}
@@ -421,7 +421,7 @@
     \chapter*{ \begin{center} \textnormal{LIST OF TABLES}  \end{center}}
     \addcontentsline{toc}{chapter}{\textnormal{LIST OF TABLES}}
     \addvspace{10pt}
-    \typeout{!! List of Tables...!!}
+    %\typeout{!! List of Tables...!!}
     \noindent
     Table \hfill Page\\         % newline allows us to use a vspace...
     % vspace adjusts spacing to get a doublespace between table headings
@@ -442,7 +442,7 @@
     \chapter*{\begin{center} \textnormal{LIST OF FIGURES} \end{center}}
     \addcontentsline{toc}{chapter}{\textnormal{LIST OF FIGURES}}
     \addvspace{10pt} 
-    \typeout{!! List of Figures...!!}
+    %\typeout{!! List of Figures...!!}
     \noindent
     Figure \hfill Page\\         % newline allows us to use a vspace...
     % vspace adjusts spacing to get a doublespace between table headings
@@ -1032,4 +1032,4 @@
 %}}}
 \endinput
 %%
-%% End of file 'usuthesis.cls'.
+%% End of file 'nyuthesis.cls'.
