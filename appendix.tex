@@ -41,11 +41,11 @@ VGG16 Model summary in Table~\ref{table1}.
   \centering
   \begin{tabular}{|c|c|c|} \hline
   
-  Layer (type) & Output shape & Param # \\ 
-  \hline
+     Layer (type) & Output shape & Parameters \\ 
+     \hline
 
-
-    input_1 (InputLayer) & [null,224,224,3] & 0 \\
+    
+    input1 (InputLayer) & \lbrack null,224,224,3\rbrack & 0 \\
     \hline
     
     block1 conv1 (Conv2D) & [null,224,224,64] & 1792 \\
@@ -82,7 +82,7 @@ VGG16 Model summary in Table~\ref{table1}.
     block4 conv1 (Conv2D) & [null,28,28,512] & 1180160 \\
     \hline
     
-    block4_conv2 (Conv2D) & [null,28,28,512] & 2359808 \\
+    block4 conv2 (Conv2D) & [null,28,28,512] & 2359808 \\
     \hline
     
     block4 conv3 (Conv2D) & [null,28,28,512] & 2359808 \\
@@ -119,10 +119,10 @@ VGG16 Model summary in Table~\ref{table1}.
 
 \end{table}
 
-\linebreak
-\textbf{Total params}: 138357544 \newline
-\textbf{Trainable params}: 138357544 \newline
-\textbf{Non-trainable params}: 138357544 \newline
+
+%\textbf{Total parameters}: 138357544 \newline
+%\textbf{Trainable parameters}: 138357544 \newline
+%\textbf{Non-trainable parameters}: 138357544 \newline
 
 \appendix{Appendix}
 

@@ -239,6 +239,11 @@
 \newcommand{\triplespaced}{\setstretch {2.6}}
 %}}}
 
+% set paragraph indent spacing
+%\parindent 3em
+\setlength{\parindent}{3em}
+%\renewcommand{\baselinestretch}{2.0}
+
 %{{{ Department-specific formatting
 \ifthen{\equal{ee}{\@@dept}}
 {
@@ -285,9 +290,6 @@
     footskip=0pt}
 
 \tabskip 0.1em plus 10em minus 0.1em
-
-% set paragraph indent spacing
-\parindent 2em
 
 % minimize orphans and widows
 \clubpenalty=9999
