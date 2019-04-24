@@ -19,8 +19,8 @@ What is fuelling these advances is the recent surge in data, the rise in computi
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=1\textwidth]{images/bg-drive-factors.png}
-\caption{Three factors driving advancement in machine learning}
+\includegraphics[width=0.90\textwidth]{images/bg-drive-factors.png}
+\caption{Three factors powering current advancement in machine learning}
 \label{3-factors}
 \end{figure}
 
@@ -73,11 +73,11 @@ Supervised learning \cite{sammut2011encyclopedia} refers to training a model usi
 
 \subsection*{Unsupervised Learning}
 
-Unsupervised learning \cite{sammut2011encyclopedia} refers to any machine learning process that seeks to learn to find patterns in a dataset, typically an unlabeled dataset or learn structure in the absence of either an identified output. Three typical examples of unsupervised learning are clustering,  association rules, and self-organizing maps.
+Unsupervised learning \cite{sammut2011encyclopedia} refers to any machine learning process that seeks to learn to find patterns in a dataset, typically an unlabeled dataset or learn structure in the absence of either an identified output. The typical examples of unsupervised learning are clustering, dimensionality reduction, recommendationand self-organizing maps.
 
 \subsection*{Reinforcement Learning}
 
-Reinforcement learning \cite{sammut2011encyclopedia} refers to a large class of learning problems characteristic of autonomous agents interacting in an environment: sequential decision-making problems with delayed reward. Reinforcement-learning algorithms seek to learn a policy (mapping from states to actions) that maximizes the reward received over time.
+Reinforcement learning \cite{sammut2011encyclopedia} refers to a large class of learning problems characteristic of autonomous agents interacting in an environment: sequential decision-making problems with delayed reward or involving reward maximization. Reinforcement-learning algorithms seek to learn a policy (mapping from states to actions) that maximizes the reward received over time.
 
 Unlike in supervised learning problems, in reinforcement-learning problems, there are no labeled examples of correct and incorrect behavior. However, unlike unsupervised learning problems, a reward signal can be perceived. This technique is based on the way animals seem to learn in response to positive feedback and requires a massive amount of dataset \cite{sammut2011encyclopedia}.
 
@@ -88,7 +88,12 @@ In mid-1990, Artificial neural networks were introduced by researchers, and they
 
 Deep learning is a superset of the machine learning domain. It is fair to say that neural networks were reincarnated around 2010 with “deep learning” as a new name, largely a result of much faster and larger computing systems, in addition to some new ideas. \cite{efron2016computer}.
 
-% TODO: NEED CUSTOM VISUALS & GRAPHICS %
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.85\textwidth]{images/timeline-1.png}
+\caption{History and Timeline}
+\label{fig:timeline}
+\end{figure}
 
 In the last decade, deep learning has been applied to various technologies and applications that require large volumes of digital data for training and providing useful information (Chen and Lin, 2014). Recently, they have has been advancing the state-of-the-art in artificial intelligence, and had led to major breakthrough in many areas such as computer vision (CV) \cite{krizhevsky2012imagenet} \cite{karpathy2014large}, speech recognition \cite{graves2013speech} \cite{mohamed2012acoustic}, and natural language processing \cite{bengio2003neural} \cite{mikolov2013distributed} \cite{mikolov2010recurrent}.
 
@@ -152,12 +157,12 @@ Feed Forward Neural Network Fig.~\ref{fig:multi-layer}.
 \clearpage
 
 \subsection{Convolutional Neural Networks}
-A convolutional neural network (CNN) is a feed-forward artificial neural network in which the network preserves the hierarchical structure by learning internal feature representations and generalizing the features in the common image problems such as image classification tasks [27]. It is not restricted to images; it also applied in natural language processing problems and speech recognition \cite{Manaswi2018}.
+A convolutional neural network (CNN) is a feed-forward artificial neural network in which the network preserves the hierarchical structure by learning internal feature representations and generalizing the features in the common image problems such as image classification tasks. It is not restricted to images; it also applied in natural language processing problems and speech recognition \cite{Manaswi2018}.
 
 Fig.~\ref{fig:CNN-1}.
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=1\textwidth]{images/cnn-arch-1.png}
+\includegraphics[width=0.90\textwidth]{images/cnn-arch-1.png}
 \caption{Network architecture and different layers}
 \label{fig:CNN-1}
 \end{figure}
@@ -186,16 +191,23 @@ Deep learning models are hard to interpret than most existing machine learning m
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.90\textwidth]{images/Black-box.png}
-\caption{Black box example of neural network system}
-\label{fig:blackbox}
+\includegraphics[width=1\textwidth]{images/Blackbox-AI-copy.eps}
+\caption{Blackbox AI System}
+\label{fig:Blackbox AI system}
 \end{figure}
 
 Due to their internal complexities and non-linear structure \cite{Samek}, the underlying decision-making processes for why the models are achieving such performance are the challenge and sometimes mystifying to interpret. Therefore, in practice, users often use them as a black box and cannot explain how learning from input data was done nor how performance can be consistently optimized due to which the development of the model largely depends on the trial-and-error process. It could also be detrimental when the model does not perform satisfactorily; users would not understand the causes or know how to fix the problem. 
 
-Generally, the information stored in a neural network is a set of numerical weights and connections that provide no direct evidence as for how to the task is executed or what is the association between inputs and outputs. The opaque nature of these models also limits their usage and acceptance in high-end science and engineering applications since it is demanded to use methods and techniques based on functions that can be understood and validated. 
+Generally, the information stored in a neural network is a set of numerical weights and connections that provide no direct evidence as for how to the task is executed or what is the association between inputs and outputs. The opaque nature of these models also limits their usage and acceptance in high-end science and engineering applications since it is demanded to use methods and techniques based on functions that can be understood and validated.
 
-Another reason that complicates the use of the neural network is that there are no well-defined criteria for choosing a neural network structure and corresponding parameter selection \cite{dlvwz}. It mostly depends on the trial and error process. The appropriate selection of parameters can vary widely even when performing very similar tasks due to various reasons. These parameters, which include network structure, depth and width of hidden layers, error bound, learning rate, training algorithm, hidden layer size, and the data vector used are often selected in a trial-and-error process. Therefore, when designing neural networks, it is tough for beginners to select the right parameters and find correct general rules. While, even for deep learning experts, it largely remains a trial-and-error process. 
+Another reason that complicates the use of the neural network is that there are no well-defined criteria for choosing a neural network structure and corresponding parameter selection \cite{dlvwz}. It mostly depends on the trial and error process. The appropriate selection of parameters can vary widely even when performing very similar tasks due to various reasons. These parameters, which include network structure, depth and width of hidden layers, error bound, learning rate, training algorithm, hidden layer size, and the data vector used are often selected in a trial-and-error process. Therefore, when designing neural networks, it is tough for beginners to select the right parameters and find correct general rules. While, even for deep learning experts, it largely remains a trial-and-error process.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.90\textwidth]{images/Black-box.png}
+\caption{Black box example of neural network system}
+\label{fig:blackbox}
+\end{figure}
 
 The problem stems from the fact that we cannot merely inspect the deep neural network to see how it works or how it performs parallel computations \cite{darksecretaimittr}. A network’s learning and reasoning are embedded in the behavior of thousands of simulated neurons, arranged in dozens or even hundreds of intricately interconnected layers. 
 
@@ -207,7 +219,14 @@ Further, traditional analysis with machine-learning systems is tricky because of
 
 As society is built upon a fabric of expected behavior and mutual trust, it is imperative we design AI systems that respect and fit with the social norms and ensure that their decision making is consistent with the ethical judgment. 
 
-With the growing influence of artificial intelligence in our lives and their impact on the public domain, there is a critical need to understand better their decisions and realize how these models operate.  In a societal context, the reasons for a decision matters a lot. For example, death caused intentionally (murder) vs. death caused unintentionally (manslaughter) are distinct crimes at the court of law. Similarly, a hiring decision made is based (directly or indirectly) on specific protected characteristics such as race, the socio-economic class has a bearing on its legality. However, currently, predictive models are not capable of reasoning this or provide any explanation \cite{molnar}.
+With the growing influence of artificial intelligence in our lives and their impact on the public domain, there is a critical need to understand better their decisions and realize how these models operate.  In a societal context, the reasons for a decision matters a lot. For example, death caused intentionally (murder) vs. death caused unintentionally (manslaughter) are distinct crimes at the court of law. Similarly, a hiring decision made is based (directly or indirectly) on specific protected characteristics such as race, the socio-economic class has a bearing on its legality. However, currently, predictive models are not capable of reasoning this or provide any kind of explanation to their decisions \cite{molnar}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{images/societal-impact-1.jpg}
+\caption{Societal implications of the black box system}
+\label{fig:societal-impacts}
+\end{figure}
 
 In this section, we examine the social implications of the black box neural network model, including how the relative opacity is potentially endangering the social equality and its wide-ranging impact in various social domains. We focus our discussion on the societal implication through seven critical themes:
 
@@ -215,10 +234,9 @@ In this section, we examine the social implications of the black box neural netw
 \item \textbf{Trust}
 \item  \textbf{Transparency}
 \item \textbf{Fairness and Inclusion}
-\item \textbf{Causality}
-\item \textbf{Safety}
+\item \textbf{Ethics}
 \item \textbf{Privacy}
-\item \textbf{Ethics \& Accountability}
+\item \textbf{Safety}
 \end{enumerate}
 
 We selected these themes because they are overarching concerns in the public domain. We discuss the harmful effect in each of these areas and identify emerging challenges in the present and future. In our discussion about these themes, we also ask the underlying questions such as: what are the current social and economic challenges faced by the rapid integration of AI, and how we can build a deeper understanding of AI in the present time that will help us create a fair and equitable future? \cite{Solon2017}
@@ -227,31 +245,37 @@ The wide-ranging impact in these selected themes makes it essential to look at h
 
 \subsection{Trust}
 
-For humans, It is easier to trust a system that explains its decisions compared to a black box. Deep learning to be confidently rolled out by industries and governments, users want greater transparency through explanations and justification of its decisions \cite{molnar}. It is an essential condition, not only for risk management but also to establish greater trust from the general public as well as regulators and supervisors in financial services. 
+Humans find it easier to trust a system that explains its decisions compared to a black box. AI and deep learning to be confidently rolled out by industries and governments, users demand greater transparency through explanations and justification of their decisions \cite{molnar}. It is an essential condition, not only for risk management but also to establish greater trust from the general public as well as regulators and supervisors in financial services.
+
 
 \subsection{Transparency}
 
-Transparency is the opposite of opacity or the notion of black box”. Transparency is considered here at the level of the entire model at the level of individual components such as parameters (decomposability), and the level of the training algorithm (algorithmic transparency). 
+Transparency is the opposite of opacity or the notion of black box”. Transparency is considered here at the level of the entire model at the level of individual components such as parameters, and the level of the training algorithm (algorithmic transparency). The element of transparency imperative to ensure that small changes in the input do not lead to large changes in the prediction.
+
+\subsection{Ethics}
+
+The concerns over the accountability and fairness of modern AI systems extends well into the ethical and legal domains. The ethical questions surrounding AI systems are wide-ranging, extending from its creation, uses and outcomes. There are critical questions posed by the advocates of ethical AI such as, How do we delegate power and decision-making to AI systems? How do we integrate AI-specific ethical concerns within the systems? It is important to consider which set of values and interests are reflected in AI, as well as how machines can recognize values and ethical paradigms we humans care. AI ethics spans broader social concerns about the effects of AI systems and the different choices made during its development.
 
 \subsection{Fairness and Inclusion}
 
 It is important to ensure that predictions made by the models are unbiased and do not implicitly or explicitly replicate human bias or discriminate against protected groups \cite{ainow2016report}. An interpretable model can explain why it decided to deny a loan for a particular person, and it becomes transparent and more accessible for a human to judge whether the decision made by the model is based on a learned demographic or not.
 
-\subsection{Causality}
-The model should ensure that it considers only causal relationships.  The system can only be compromised if the inputs are proxies for a causal feature, but do not cause the outcome. Hence proxy features should be avoided as they make models vulnerable. (\cite{molnar})
-
-\subsection{Ethics}
-
-Ethical questions surrounding AI systems are wide-ranging, spanning creation, uses and outcomes. There are important questions about which set of values and interests are reflected in AI, as well as how machines can recognize values and ethical paradigms. AI ethics concerns broader social concerns about the effects of AI systems and the choices made by the people who developed it.
-
 \subsection{Privacy}
-Assuring that sensitive information in the data is protected and uncompromised is important for privacy and security \cite{molnar}. AI challenges current understandings of privacy and strains the laws and regulations we have in place to protect personal information. Established approaches to privacy have become less and less effective because they are focused on previous metaphors of computing, ones where adversaries were primarily human. AI systems’ intelligence, as such, depends on ingesting as much training data as possible. This primary objective is adverse to the goals of privacy. AI thus poses significant challenges to traditional efforts to minimize data collection and to reform government and industry surveillance practices. 
+
+AI challenges current understandings of privacy and strains the laws and regulations we have in place to protect personal information. Established approaches to privacy had become less and less effective until the General Data Protection Regulation (GDPR) came into effect across the European Union on May 25, 2018.
+
+The former approaches to privacy were ineffective and inadequate because they were focused on outdated metaphors of computing, where adversaries were primarily human and failed to evolve with the advancement in computing. Whereas, the intelligence of AI systems, as such, depends on ingesting as much training data as possible. This primary objective is adverse to the goals of privacy. AI thus poses significant challenges to traditional efforts to govern data collection and enact laws to reform government and industry surveillance practices. Thus assuring that sensitive information in the user data is protected and was not compromised is important for privacy and security \cite{molnar}. 
 
 \subsection{Safety}
-Interpretability is especially critical if we want to consider autonomous vehicle safety before deploying the system, e.g., if specific errors are unacceptable even during training like specific edge case testing for self-driving cars. This aspect extends beyond autonomous vehicles to general AI systems, weighing in what kind of understanding is most helpful for safety?
 
-\subsection{Accountability}
-Terminology is now further complicated by concerns over the accountability (Diakopoulos 2016) and fairness (O’Neil 2016) of modern AI systems which, while overlapping the issue of end-user trust, extend into ethical and legal domains. It is important to ensure that small changes in the input do not lead to large changes in the prediction.
+Interpretability is especially critical if we want to consider autonomous vehicle safety before deploying the system, e.g., if specific errors are unacceptable even during training like specific edge case testing for self-driving cars. This aspect extends beyond autonomous vehicles to general AI systems, weighing in what kind of understanding tend to be most helpful for safety?
+
+\subsection*{Causality}
+
+The use of proxy features during feature selection pose greater risk 
+The model should ensure that it considers only causal relationships.  The system can only be compromised if the inputs are proxies for a causal feature, but do not cause the outcome. Hence proxy features should be avoided as they make models vulnerable \cite{molnar}.
+
+Causal inference methods focus solely on extracting causal relationships from data, i.e. statements that altering one variable will cause a change in another. In contrast, interpretable ML, and most other statistical techniques, are generally used to describe non-causal relationships, or relationships in. The model should ensure that it considers only causal relationships when it comes to feature selection.
 
 \subsection{Why Interpretability Matters}
 
@@ -341,6 +365,6 @@ Data analysis is an indispensable part of the machine learning project pipeline,
     
 Visual Analytics combines information visualization and scientific visualization and focuses on the analytical reasoning enabled with interactive visual interfaces. It’s an amalgamation of computer science, information visualization, cognitive and perceptual sciences, interactive design and social science.
 
-Visual Analytics system have been developed to inspect artificial neural networks since visual feedback is considered highly valuable by both the practitioners and researchers
+Visual Analytics system have been developed to inspect artificial neural networks since visual feedback is considered highly valuable by both the practitioners and researchers.
 
 
