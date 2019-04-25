@@ -9,13 +9,14 @@
 
 \section{The Rise of Machine Learning}
 
-Machine learning now affects many aspects of our lives from web searches,  recommendations on e-commerce websites, smart speakers, movie recommendations, stock predictions to criminal justice and healthcare systems. It is omnipotent in consumer products such as cameras, smartphones and personal assistants. There is a huge incentive for businesses to apply machine learning from enhanced decision making, business forecast, cost reduction, risk management, productivity improvements, as well as the development of new products and services.
+%Artificial Intelligence (AI) is democratized in our everyday life%
+Machine learning now affects many aspects of our lives from web searches, streaming services, recommendations on e-commerce websites, smart speakers, stock predictions to criminal justice and healthcare systems. It is omnipotent in consumer products such as cameras, smartphones and personal assistants. There is a huge incentive for businesses to apply machine learning from enhanced decision making, business forecast, cost reduction, risk management, productivity improvements, as well as the development of new products and services.
 
-Machine learning is a branch of computer science that uses statistical techniques to give computer systems the ability to learn from data, find patterns in data and make highly accurate predictions. In other words, its a set of techniques used to teach computers how to learn, reason, perceive, distinguish, infer, communicate and make decisions like human do. It is a large part of modern artificial intelligence. Here, data encompasses many things such as words, numbers, images, video and more. Machine learning learns from the experience, following a pathway that nature took millions of year ago \cite{sammut2011encyclopedia}. It's a paradigm shift from the 'normal' programming where all the instructions must be given explicitly to the computer to 'indirect' programming where the computer learns itself from the data without being explicitly programmed .
+Machine learning is a branch of computer science that uses statistical techniques to give computer systems the ability to learn from data, find patterns in data and make highly accurate predictions. In other words, its a set of techniques used to teach computers how to learn, reason, perceive, distinguish, infer, communicate and make decisions like human do. It is a large part of modern artificial intelligence (AI). Here, data encompasses many things such as words, numbers, images, video and more. Machine learning learns from the experience, following a pathway that nature took millions of year ago \cite{sammut2011encyclopedia}. It's a paradigm shift from the 'normal' programming where all the instructions must be given explicitly to the computer to 'indirect' programming where the computer learns itself from the data without being explicitly programmed .
 
 Not very long ago, to say that computer vision could compete with the visual abilities of a one-year-old was seemingly a paradox\cite{sejnowski2018deep}. It is no longer valid. Machine learning techniques can now recognize objects in an image as well as an adult can, digitize handwritten characters, transcribe speech into text, classify wine types, support diagnosis of severe diseases, match news item or product with user's interest and select results relevant to the search. Then there are self-driving cars \cite{sejnowski2018deep} on the road that can drive safely than an average person. 
 
-What is fuelling these advances is the recent surge in data, the rise in computing power over the past few years and faster algorithms, which has led to breakthroughs in the field of machine learning. These three are the essential ingredients that lead to the emergence of deep learning revolution.
+What is fuelling these advances is the recent surge in data, the rise in computing power over the past few years and faster algorithms, which has led to breakthroughs in the field of machine learning. These three are the essential ingredients that lead to the emergence of deep learning revolution \cite{gerrish_how_2018}.
 
 \begin{figure}[htbp]
 \centering
@@ -73,7 +74,7 @@ Supervised learning \cite{sammut2011encyclopedia} refers to training a model usi
 
 \subsection*{Unsupervised Learning}
 
-Unsupervised learning \cite{sammut2011encyclopedia} refers to any machine learning process that seeks to learn to find patterns in a dataset, typically an unlabeled dataset or learn structure in the absence of either an identified output. The typical examples of unsupervised learning are clustering, dimensionality reduction, recommendationand self-organizing maps.
+Unsupervised learning \cite{sammut2011encyclopedia} refers to any machine learning process that seeks to learn to find patterns in a dataset, typically an unlabeled dataset or learn structure in the absence of either an identified output. The typical examples of unsupervised learning are clustering, dimensionality reduction, recommendation and self-organizing maps.
 
 \subsection*{Reinforcement Learning}
 
@@ -86,7 +87,7 @@ In mid-1990, Artificial neural networks were introduced by researchers, and they
 
 \section{Deep Learning Revolution}
 
-Deep learning is a superset of the machine learning domain. It is fair to say that neural networks were reincarnated around 2010 with “deep learning” as a new name, largely a result of much faster and larger computing systems, in addition to some new ideas. \cite{efron2016computer}.
+Deep learning is a super set of the machine learning domain. It is fair to say that neural networks were reincarnated around 2010 with “deep learning” as a new name, largely a result of much faster and larger computing systems, in addition to some new ideas. \cite{efron2016computer}.
 
 \begin{figure}[htbp]
 \centering
@@ -159,7 +160,6 @@ Feed Forward Neural Network Fig.~\ref{fig:multi-layer}.
 \subsection{Convolutional Neural Networks}
 A convolutional neural network (CNN) is a feed-forward artificial neural network in which the network preserves the hierarchical structure by learning internal feature representations and generalizing the features in the common image problems such as image classification tasks. It is not restricted to images; it also applied in natural language processing problems and speech recognition \cite{Manaswi2018}.
 
-Fig.~\ref{fig:CNN-1}.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.90\textwidth]{images/cnn-arch-1.png}
@@ -167,7 +167,7 @@ Fig.~\ref{fig:CNN-1}.
 \label{fig:CNN-1}
 \end{figure}
 
-A classic network architecture of CNN is comprised of stacked convolutional layers, periodically followed by a pooling layer, activation function, and optional batch normalization. It also consist of the fully connected layers. As an image moves through the network, it's spatial dimensions are periodically downsampled while increasing the number of feature maps. The final layer outputs the class probabilities prediction.
+A classic network architecture of CNN is comprised of stacked convolutional layers, periodically followed by a pooling layer, activation function, and optional batch normalization. It also consist of the fully connected layers. As an image moves through the network, it's spatial dimensions are periodically down-sampled while increasing the number of feature maps. The final layer outputs the class probabilities prediction.
 
 These architectures can be broadly classified as classic network architectures such as, LeNet-5, AlexNet and VGG16, and modern network architectures such as Inception, ResNet, ResNeXt and DenseNet. While the classic network architectures are mainly comprised of stacked convolutional layers and few fully connected layers, the latest state-of-the-art architectures explore innovative techniques for constructing convolutional layers that allows for more efficient learning.
 
@@ -179,7 +179,7 @@ A simple example of a computer vision model Fig.~\ref{fig:CNN-2}.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.75\textwidth]{images/CNN.png}
-\caption{Example.1}
+\caption{Computer Vision Example}
 \label{fig:CNN-2}
 \end{figure}
 
@@ -198,7 +198,7 @@ Deep learning models are hard to interpret than most existing machine learning m
 
 Due to their internal complexities and non-linear structure \cite{Samek}, the underlying decision-making processes for why the models are achieving such performance are the challenge and sometimes mystifying to interpret. Therefore, in practice, users often use them as a black box and cannot explain how learning from input data was done nor how performance can be consistently optimized due to which the development of the model largely depends on the trial-and-error process. It could also be detrimental when the model does not perform satisfactorily; users would not understand the causes or know how to fix the problem. 
 
-Generally, the information stored in a neural network is a set of numerical weights and connections that provide no direct evidence as for how to the task is executed or what is the association between inputs and outputs. The opaque nature of these models also limits their usage and acceptance in high-end science and engineering applications since it is demanded to use methods and techniques based on functions that can be understood and validated.
+Generally, the information stored in a neural network is a set of numerical weights and connections that provide no direct evidence as for how to the task is executed or what is the association between inputs and outputs \cite{Tzeng2005}. The opaque nature of these models also limits their usage and acceptance in high-end science and engineering applications since it is demanded to use methods and techniques based on functions that can be understood and validated.
 
 Another reason that complicates the use of the neural network is that there are no well-defined criteria for choosing a neural network structure and corresponding parameter selection \cite{dlvwz}. It mostly depends on the trial and error process. The appropriate selection of parameters can vary widely even when performing very similar tasks due to various reasons. These parameters, which include network structure, depth and width of hidden layers, error bound, learning rate, training algorithm, hidden layer size, and the data vector used are often selected in a trial-and-error process. Therefore, when designing neural networks, it is tough for beginners to select the right parameters and find correct general rules. While, even for deep learning experts, it largely remains a trial-and-error process.
 
@@ -213,22 +213,28 @@ The problem stems from the fact that we cannot merely inspect the deep neural ne
 
 For example, in the CNN model, neurons in the first layer receive an input image (as RGB value), which performs computation and outputs a new signal. These signals are fed into the successive layer and so on until the final layer output is generated \cite{darksecretaimittr}. Additionally, there is a process known as backpropagation that adjusts the calculation of neurons to optimize the output. The backpropagation algorithm is the standard training method which uses gradient descent optimization to update the parameters.
 
-Further, traditional analysis with machine-learning systems is tricky because of the intricate array of high dimensional data involved. Advanced algorithms discern so many varied patterns in the dataset, which they leverage to make decisions. The user has an idea about what went in but has no idea about what patterns were recognized or were most significant to arrive at the solution that are spit out.
+Further, traditional analysis with dense network is complicated because of the intricate array of high dimensional data involved. Advanced algorithms discern so many varied patterns in the dataset, which they leverage to make decisions. The user has an idea about what went in but has no idea about what patterns were recognized or were most significant to arrive at the solution that was given out.
 
 \section{Societal Implications}
 
-As society is built upon a fabric of expected behavior and mutual trust, it is imperative we design AI systems that respect and fit with the social norms and ensure that their decision making is consistent with the ethical judgment. 
+As AI democratizes in our life and permeates every aspect of our social lives from the social media platforms, smart speakers and streaming services to our criminal justice system and healthcare, it is now deeply embedded in business decisions, both routine and high stakes because they provide superior performance and promise to improve the consistency and quality of decision-making. 
 
-With the growing influence of artificial intelligence in our lives and their impact on the public domain, there is a critical need to understand better their decisions and realize how these models operate.  In a societal context, the reasons for a decision matters a lot. For example, death caused intentionally (murder) vs. death caused unintentionally (manslaughter) are distinct crimes at the court of law. Similarly, a hiring decision made is based (directly or indirectly) on specific protected characteristics such as race, the socio-economic class has a bearing on its legality. However, currently, predictive models are not capable of reasoning this or provide any kind of explanation to their decisions \cite{molnar}.
+These techniques have also been embraced in regulated domains such as employment, credit, and insurance, where critical decisions like who gains access to healthcare, who’s approved for a loan, who gains access to critical opportunities and criminal risk assessment \cite{ainow2018} depends on the output of the machine learning model. Yet there is a growing perception an concern that these learning models from historical data can end up encoding human biases and prejudice they promised to alleviate.
+
+Over the past few years, algorithmic fairness and accountability has become a matter of concern for consumer advocates, regulators, policymakers, and even businesses. As society is built upon a fabric of expected behavior and mutual trust \cite{Lipton2018}, it is imperative we design AI systems that respect and fit with the social norms and ensure that their decision making is consistent with the ethical judgment.
+
+With the growing influence of AI and their prevailing impact on the public domain, there is a critical need to better understand their decisions and realize how these models operate.  In a societal context, the reasons for a decision matters a lot. For example, death caused intentionally (murder) vs. death caused unintentionally (manslaughter) are distinct crimes at the court of law. Similarly, a hiring decision made is based (directly or indirectly) on specific protected characteristics such as race, the socio-economic class has a bearing on its legality. However, currently, predictive models are not capable of reasoning this or provide any kind of explanation to their decisions \cite{molnar}.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.9\textwidth]{images/societal-impact-1.jpg}
+\includegraphics[width=1\textwidth]{images/societal-impact-1.jpg}
 \caption{Societal implications of the black box system}
 \label{fig:societal-impacts}
 \end{figure}
 
 In this section, we examine the social implications of the black box neural network model, including how the relative opacity is potentially endangering the social equality and its wide-ranging impact in various social domains. We focus our discussion on the societal implication through seven critical themes:
+
+In this talk, Solon will offer a survey of the wide range of fairness concerns prompted by businesses' embrace of machine learning.
 
 \begin{enumerate}
 \item \textbf{Trust}
@@ -239,7 +245,7 @@ In this section, we examine the social implications of the black box neural netw
 \item \textbf{Safety}
 \end{enumerate}
 
-We selected these themes because they are overarching concerns in the public domain. We discuss the harmful effect in each of these areas and identify emerging challenges in the present and future. In our discussion about these themes, we also ask the underlying questions such as: what are the current social and economic challenges faced by the rapid integration of AI, and how we can build a deeper understanding of AI in the present time that will help us create a fair and equitable future? \cite{Solon2017}
+We selected these themes because they are overarching concerns in the public domain. We discuss the harmful effect in each of these areas and identify emerging challenges in the present and future. In our discussion about these themes, we also ask the underlying questions such as: what are the current social and economic challenges faced by the rapid integration of AI, and how we can build a deeper understanding of AI \cite{Solon2017} in the present time that will help us create a fair and equitable future?
 
 The wide-ranging impact in these selected themes makes it essential to look at how these automated decision-making systems are being applied now in regulated industries, whom they are benefiting, whom they are undermining, and how they are structuring the socio-economic aspect of society and individuals \cite{ainow2016report}.
 
@@ -250,11 +256,11 @@ Humans find it easier to trust a system that explains its decisions compared to 
 
 \subsection{Transparency}
 
-Transparency is the opposite of opacity or the notion of black box”. Transparency is considered here at the level of the entire model at the level of individual components such as parameters, and the level of the training algorithm (algorithmic transparency). The element of transparency imperative to ensure that small changes in the input do not lead to large changes in the prediction.
+Transparency is the opposite of opacity or the notion of black box”. Transparency is considered here at the level of the entire model at the level of individual components such as parameters, and the level of the training algorithm (algorithmic transparency). The element of transparency imperative to ensure that small changes in the input do not lead to large changes in the prediction \cite{molnar}.
 
 \subsection{Ethics}
 
-The concerns over the accountability and fairness of modern AI systems extends well into the ethical and legal domains. The ethical questions surrounding AI systems are wide-ranging, extending from its creation, uses and outcomes. There are critical questions posed by the advocates of ethical AI such as, How do we delegate power and decision-making to AI systems? How do we integrate AI-specific ethical concerns within the systems? It is important to consider which set of values and interests are reflected in AI, as well as how machines can recognize values and ethical paradigms we humans care. AI ethics spans broader social concerns about the effects of AI systems and the different choices made during its development.
+The concerns over the accountability and fairness of modern AI systems extends well into the ethical and legal domains. The ethical questions surrounding AI systems are wide-ranging, extending from its creation, uses and outcomes. There are critical questions posed by the advocates of ethical AI such as, How do we delegate power and decision-making to AI systems? \cite{ainow2016report} How do we integrate specific ethical concerns within the systems? It is important to consider which set of values and interests are reflected in AI, as well as how machines can recognize values and ethical paradigms we humans care. AI ethics spans broader social concerns about the effects of AI systems and the different choices made during its development.
 
 \subsection{Fairness and Inclusion}
 
@@ -268,7 +274,7 @@ The former approaches to privacy were ineffective and inadequate because they we
 
 \subsection{Safety}
 
-Interpretability is especially critical if we want to consider autonomous vehicle safety before deploying the system, e.g., if specific errors are unacceptable even during training like specific edge case testing for self-driving cars. This aspect extends beyond autonomous vehicles to general AI systems, weighing in what kind of understanding tend to be most helpful for safety?
+Interpretability is especially critical if we want to consider autonomous vehicle \cite{shannon_mattern} safety before deploying the system, e.g., if specific errors are unacceptable even during training like specific edge case testing for self-driving cars. This aspect extends beyond autonomous vehicles to general AI systems, weighing in what kind of understanding tend to be most helpful for safety?
 
 \subsection*{Causality}
 
@@ -300,18 +306,18 @@ As deep learning spreads across domains, it is of paramount importance that we e
 
 \section{Explainable and Interpretable System}
 
-The concept of interpretability center around human understanding and other things. In the context of neural networks, they vary in the aspect of the model to be understood: its internals, operations, mapping of data, or representation. Although recent work has begun to standardize the definition of interpretability, a formal and universally agreed-upon definition remains open.
+The concept of interpretability center around human understanding and other things. In the context of neural networks, they vary in the aspect of the model to be understood: its internals, operations, mapping of data, or representation. Although recent work has begun to standardize the definition of interpretability \cite{Lipton2018}, a formal and universally agreed-upon definition remains open.
 
 Interpretability is defined as the point to which a human can understand the causes of a decision. Another definition is that Interpretability is the degree to which a human can consistently predict the model’s result \cite{molnar}. The higher the interpretability of a machine learning model, the easier it is for someone to comprehend why certain decisions or predictions have been made. A model is better interpretable when its decisions are more accessible for a human to comprehend than decisions made by them \cite{molnar}.
     
-Interpretability is the process of generating humanly understandable explanations of why a deep learning model makes a particular decision. Since the learning system hides the entire decision process behind the complicated inner-workings of deep learning models, it becomes difficult to obtain interpretations and explanations for their decisions.
+In our case, interpretability is the process of generating humanly understandable explanations of why a deep learning model makes a particular decision. Since the learning system hides the entire decision process behind the complicated inner-workings of deep learning models, it becomes difficult to obtain interpretations and explanations for their decisions.
 
 As deep learning become an indispensable tool for a wide range of applications in business and public domain, it is essential to be able to verify for a certain task that the accuracy results from the proper framing of a problem statement, and there is no exploitation of artifacts in the data. Techniques for interpreting and understanding what the model has learned have therefore become a key ingredient of a robust validation procedure \cite{taylor2006methods} \cite{hansen2011visual} \cite{bach2015pixel}. Interpretability is critical in applications such as medical diagnosis, credit approvals and self-driving cars, where the dependency of the model on the correct features should be guaranteed \cite{Caruana:2015:IMH:2783258.2788613} \cite{bojarski2017explaining}.
 
 \subsection{Explainable Artificial Intelligence}
-<REWRITE> Explainable Artificial Intelligence (XAI) is a concept that explains decisions made by machine learning models, enables understanding of overall strengths and weaknesses, and conveys an understanding of how the system will behave in the future and how to correct the system’s mistakes. 
+Explainable Artificial Intelligence (XAI) is a concept that explains decisions made by the machine learning models and provide justification in a way interpretable by humans. It enables understanding of overall strengths and weaknesses, and conveys an understanding of how the system will behave when implemented in future and how to correct the system’s mistakes. 
 
-<REWRITE> XAI proposes to make a shift towards more transparent AI. It aims to create a suite of techniques that produce more explainable models while maintaining high performance levels. This area of research holds substantial promise for improving trust and transparency of AI-based systems
+The XAI research and proposals offers a shift towards more transparent and explainable AI system. It aims to create a suite of techniques that produce more interpretable models while maintaining high performance levels. This area of research holds substantial promise for improving trust and transparency of AI-based systems.
 
 \begin{figure}[htbp]
 \centering
@@ -320,18 +326,19 @@ As deep learning become an indispensable tool for a wide range of applications i
 \label{fig:xai-1}
 \end{figure}
 
-<REWRITE> There has been a wave of interest in explainable artificial intelligence in recent years driven by DARPA’s initiative to fund XAI projects. Historically, there has been occasional interest in explanations of intelligent systems and automated decision making systems over the past decades with expert systems, designed to solve complex problems by reasoning through prior knowledge in the 1970s [165, 172], Bayesian networks and artificial neural networks [6] in the 1980s, and then the recommendation systems in the 2000s [33, 81]. The recent successes and advancement of AI and machine learning for many large-scale applications and the use of increasingly complex and non-transparent algorithms, mainly deep learning, calls for another rise of interest for the need to better understand these systems.
+The Defense Advanced Research Projects Agency (DARPA), a division of the Defense Department that explores innovative technologies, is funding several projects that aim to make artificial intelligence more interpretable and explainable. The approaches range from adding further machine-learning systems geared toward providing an explanation, to the development of new machine learning techniques where the elucidation is embedded by design. The initiative involves collaboration with research institutes and academic partners to identify challenges in problem areas and develop interpretable models and explainable AI system.
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=1\textwidth]{images/xai-1-01.png}
-\caption{XAI Explanation Framework -> METHODOLOGIES}
-\label{fig:xai-1}
-\end{figure}
+The recent wave of interest in explainable artificial intelligence can be attributed to the latest efforts by the DARPA's initiative to fund XAI projects. As defense intelligent agents and military operations may come to rely heavily on machine learning to parse huge quantities of data from satellite imagery, radio signals and other sensors, and to control a growing equipment of autonomous systems. US military wants to take pre-emptive measure to ensure that this reliance doesn’t lead to blindly trusting in any type of algorithms. It might not matter that much if the new machine learning technique is opaque but not in the case of a military commander trying to identify a potential target \cite{Knight2017} or an intelligence officer surveilling cyberespionage by a foreign agent.
 
-XAI has been gaining increasing attention lately with several conference series dedicated exclusively to the topic of interpretability, transparency, fairness and accountability. Broadly, XAI landscape can be divided into two research groups (i) a group of academic institutions, non-profit research labs and firms in the regulated industries (such as credit, insurance and finance) and (ii) civilian and military researchers funded by Defense Advanced Research Projects Agency (DARPA). The former group is mainly focused on promoting fairness and transparency in algorithmic decision-making with social and commercial impact.
+DARPA program managers recognizes that there is a real advancement happening in AI and that these models are very opaque and difficult for people to interpret, especially if they are not an expert in AI \cite{Knight2017}. Thereupon, they are committed to helping develop AI techniques that provide explanation for their reasoning.
 
-Recently, DARPA released Explainable Artificial Intelligence (DAR, 2016) to encourage research on this topic. The main goal of XAI is to create a suite of machine learning techniques that produce explainable models to enable users to understand, trust, and manage the emerging generation of Artificial Intelligence (AI) systems.
+DARPA is funding several research groups, which are pursuing a range of approach and techniques to make AI models more explainable. Recently, it released Explainable Artificial Intelligence (DAR, 2016) to encourage research on this topic \cite{Gunning}. The main goal of XAI is to create a suite of machine learning techniques that produce explainable models to enable users to understand, trust, and manage the emerging generation of Artificial Intelligence systems \cite{Gunning2}.
+
+Furthermore, military will be developing several autonomous systems in the coming years that will undoubtedly rely heavily on machine learning techniques like deep learning. Self driving military vehicles, along with aerial drones will be deployed and they will become increasingly capable over time.
+
+Historically, there has been occasional interest in explanations of intelligent systems and automated decision making systems over the past decades with expert systems \cite{Abdul}, designed to solve complex problems by reasoning through prior knowledge in the 1970s, Bayesian networks and artificial neural networks [6] in the 1980s, and then the recommendation systems in the 2000s. The recent successes and proliferation of AI and machine learning for wide-ranging large-scale applications and the use of increasingly complex and non-transparent algorithms, necessitates another rise of interest for the need to better understand these systems.
+
+XAI has been gaining increasing attention lately with several conference series dedicated exclusively to the topic of interpretability, transparency, fairness and accountability. Broadly, XAI landscape can be divided into two research groups (i) a group of academic institutions, non-profit research labs and firms in the regulated industries (such as credit, insurance and finance) and (ii) civilian and military researchers funded by DARPA. The former group is mainly focused on promoting fairness and transparency in algorithmic decision-making with social and commercial impact.
 
 \iffalse
 \begin{tabular}{ l c r }
@@ -355,7 +362,7 @@ Deep learning visualization research is an interdisciplinary area involving both
 
 In addition to that, since this area is relatively new and emerging \cite{Choo2018}, it has seen more attention at multiple conferences and workshops, such as Neural Information Processing Systems (NeurIPS), IEEE Transactions on Visualization, IEEE Information Visualization and Computer Graphics and ICML Workshop on Human Interpretability in ML as just to name a few examples.
 
-\subsection{Information Visualization Elements}
+\subsection{Information Visualization}
 
 Information visualization is the study and usage of visual representation of abstract data to reinforce human cognition. It can help with the discovery of unstructured actionable insight, exploring and understanding the patterns in the data to communicate essential aspects of your data set in a concise, easy-to-understand fashion.
 
