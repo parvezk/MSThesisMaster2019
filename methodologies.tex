@@ -25,47 +25,61 @@ Additionally, we also employed other research methods to support our research pr
 \subsection{Action Research}
 Action Research is a research methodology driven by practical problems, emphasis participatory research, and develops practically useful solutions to a real-world problem iteratively. It offers a systematic, collaborative approach to conducting research that satisfies both the need for scientific rigor and promotion of sustainable social change and has been taken up by a variety of researchers in both academic and industrial settings \cite{Hayes:2011:RAR:1993060.1993065}.
 
+Action Research is a research methodology driven by practical problems, emphasis participatory research, and develops practically useful solutions to a real-world problem iteratively. It offers a systematic, collaborative approach to conducting research that satisfies both the need for scientific rigor and promotion of sustainable social change and has been taken up by a variety of researchers in both academic and industrial settings \cite{Hayes:2011:RAR:1993060.1993065}.
+
+Action Research is a research methodology driven by practical problems, emphasis participatory research, and develops practically useful solutions to a real-world problem iteratively. It offers a systematic, collaborative approach to conducting research that satisfies both the need for scientific rigor and promotion of sustainable social change and has been taken up by a variety of researchers in both academic and industrial settings \cite{Hayes:2011:RAR:1993060.1993065}.
+
 Further, Action Research emphasizes the knowledge produced in the context of the application \cite{401014119781201}. It’s a distinct candidate research method when the objective is to explore theory concerning practice.
 
 \section{Research Hypothesis}
 
-While deep neural networks learn efficient and powerful representations and deliver superior performance, most users consider them as a ‘black-box.’ As in most cases, they learn representation and patterns that is difficult to extract and present it in a human-readable form. While this can be true for certain types of deep learning models, it is not entirely true for an image recognition model because they are representation of visual concepts which can be deconstructed to see what patterns were detected by the model at successive layers and how does that correlate to the prediction output.
+We attempt to use visualization techniques for explaining predictions made by a visual classifier model. This woud help....
+
+While deep neural networks learn powerful representations and deliver superior performance, most users consider them as a ‘black-box.’ due to their opaque nature and incomprehensible working mechanism. As in most cases, they learn representation and patterns that is difficult to extract and present it in a human-readable form. While this can be true for certain types of deep learning models, it is not entirely true for an image recognition model because they are representation of visual concepts which can be deconstructed to see what shapes and patterns were detected by the model at successive layers and how does that correlate to the prediction class at the output. Building upon this assumption, we formulate our hypothesis as follows.
+
+Typically a neural network is provided with an instance, for example, an image or audio segment, and it computes transformation on this instance at successive layers until it finally produces a probability value for a prediction. Inside the network, each neuron at each layer detects a specific feature through training and multiple epochs. The information flowing through the neural network is a set of numerical weights parameters, and connections that provides no direct clues as to how the task is performed or what is the correlation between inputs and outputs. Further the parameter selection is random and adjusted iteratively during the training process. %Even when performing very similar tasks, the appropriate choice of network parameters can vary widely, which include network structure, error bound, learning rate, optimization algorithm, depth and width of the hidden layers, and the data vector used, are often chosen in a trial-and-error process.
+
+The research of interpretability investigates how to make sense of what specific feature a network has detected, to what inputs neurons are most receptive to and how does that correlate to the class prediction. We studied existing methods for interpretability, a general approach to how neural network learns and operates internally that considers the magnitude of each detected feature inside hidden layers.
+
+Our analysis of previous works suggest that deeper representation in a CNN capture higher-level visual concept (i.e beyond edges and basic patterns). More interesting is the fact that convolutional layers naturally retain the spatial information of the input data which is otherwise lost in fully connected layers. Thus we expect the last convolutional layer to retain better feature balance between spatial information and class semantics. The neurons in the last convolutional layer observe more and more the class specific information in the image, such as object parts. We can use gradient descent to compute the gradient of the activation output of the last layer of the CNN to understand the importance of each neuron for a decision of interest. We use visualization technique to highlight the importance of each neuron and its correlation to the prediction made by the model
+
+We focus on visualizing the activation outputs in a network to explain the decision made by the network. With the above mentioned complexity of the model and the corresponding emerging need for interpretability, visualization is a potentially a powerful techniques to fill such a critical need and see through the black box. We discuss the deconstruction of the model inference of an image model more in coming sections.
 
 \section{Design Goals}
+
+In our pursuit for visualizing, interpreting and explaining deep learning model, We propose a visualization technique to understand model inference that focuses on the class differential properties of the visual object. The tool predicts a class label and then shows why the predicted label is appropriate for the image using receptivity analysis method. This method is useful to highlight which part of the image is most relevant to the classification decision. The second method activation graph extrapolates how the network builds their internal representation of  features detected by the network during the inference process.
+
+The prototype is intended and designed for people with a non-technical background to visually understand the decision of an image classifier. Our objective can be summarized mainly as (i) provide visual explanation of the prediction made by a visual classifier to non-expert (ii) Education and communication for non-technical audience and (iii) broaden people's access to interactive tools for deep learning.
+
+%Develop a prototype that serves a set of utilities or toolkit for interpreting a visual classifier by providing visual evidence for their decision using interactive visualization.
+
+%We propose a visualization technique to understand model inference on an input image. 
+
+%we distill the following main design goals for SUMMIT, an interactive visualization system for summarizing what features a neural network has learned
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=1\textwidth]{images/xai-1-01.png}
-\caption{Explanation Approach -> METHODOLOGIES}
+\caption{Explanation Approach}
 \label{fig:explanation-approach}
 \end{figure}
 
-<REWRITE> Building upon our research question stated in the above section; we formulated our hypothesis as follows -  Develop a prototype that serves a set of utilities or toolkit for interpreting a visual classifier by providing visual evidence for their decision using interactive visualization.
 
-Visualization is a potentially a powerful techniques to fill such a critical need of a black box. To deconstruct the inference process of an image model: 
+DESIGN CONCEPT - APPROACH
 
-We propose a visualization technique to understand neural net inference on a given image.  The representations learned by deep neural net like CNN are highly responsive to visualization, in large part because they are representations of visual concepts.
+This section introduces two visualization approach for explaining predictions of an image classifier model. The process of explanation is summarized in Fig. 1. First, the system correctly classifies the input image as “rooster”. Then, an explanation method is applied to explain the prediction in terms of input variables. The result of this explanation process is a heatmap visualizing the importance of each pixel for the prediction. In this example the rooster’s red comb and wattle are the basis for the AI system’s decision.
 
-Motivated by the notion of explainablitiy and interpretable model 
+our approach is the ***** (CAM) approach to localization [51]. This approach computes ***** (discriminative class, gradient of class activation with respect to the input) replacing ***** layers and global average pooling [28], thus achieving class-specific feature maps. 
 
+1. Receptivity to Class Activation Map
+
+TO OBTAIN THE LOCALIZATION MAP:
 localization in the context of CNNs, where the task is to localize objects in images using only whole image class labels
 
 We would like to know what attributed to the classification decision.
 
-Our work focuses on explaining decisions the network can possibly make using visual evidence 
-
-***** TO OBTAIN THE LOCALIZATION MAP*****
-
-A number of previous works have asserted that deeper representations in a CNN capture higher-level visual constructs [5, 35]. Furthermore, convolutional features naturally retain spatial information which is lost in fully-connected layers, so we can expect the last convolutional layers to have the best compromise between high-level semantics and detailed spatial information. The neurons in these layers look for semantic class-specific information in the image (say object parts). Grad-CAM uses the gradient information flowing into the last convolutional layer of the CNN to understand the importance of each neuron for a decision of interest. Although
-
-our approach is the Class Activation Map-
-ping (CAM) approach to localization [51]. This approach modifies image classification CNN architectures replacing fully-connected layers with convolutional layers and global average pooling [28], thus achieving class-specific feature maps. Others have investigated similar methods using global max pooling
-
-We introduce a way of combining feature maps using the gradient signal.....
-
-\section{Prototype Objective}
-A client side deep learning application===
-<REWRITE> The prototype is intended and designed for people with a non-technical background to understand the fundamental concepts of the neural network, in our case, a visual classifier. Our objective can be summarized mainly as (1) Explanation of neural networks for people with a non-computer science background (2) Inspire curiosity and learning among non-technical audiences  (3) Broadens people's access to interactive tools for deep learning.
+2. Layer Wise Reception
+3. Attribution Graph
 
 \section{Technical Design}
 The following segment provides an overview of the technical design and resources required for the successful development of the prototype. It provides a high-level overview of the components in scope, functionality, dataset and environmental setup.
@@ -73,7 +87,7 @@ The following segment provides an overview of the technical design and resources
 \subsection{Client-side Neural Network}
 Developing AI applications using modern deep learning framework is a non-trivial task. Normally these frameworks and libraries are leveraged by native applications that run on a native platform environment such as Linux, Windows, MacOS/iOS and Android. Thus most production-level libraries are developed for and written in Python, Java and C++. 
 
-Developing AI application that is cross-platform and portable on multiple devices is not easy. The development of a native application is an intricate and time-consuming process. It is particularly complicated for mobile applications as the app vendors usually need to develop and maintain both iOS and Android version, in addition to the desktop application.
+Developing machine learning application that is cross-platform and portable on multiple devices is not easy. The development of a native application is an intricate and time-consuming process. It is particularly complicated for mobile applications as the app vendors usually need to develop and maintain both iOS and Android version, in addition to the desktop application.
 
 Compared to the native application, client-side applications can make the portability issue simpler for the cross-platform. The sample implementation of deep learning powered web application can be deployed on multiple platforms regardless of operating systems, hardware or device types.
 
@@ -116,9 +130,6 @@ Furthermore, TensorFlow.js takes advantage of GPU processing power to accelerate
 
 Since both client-side and server-side framework are part of the TensorFlow ecosystem, we can access APIs that are compatible with either ones. This also makes model conversion easier and allows for models to be ported between Python and JavaScript ecosystems \cite{Smilkov2019}.
 
-\section{Environment Setup}
-HPC Prince
-
 \section{System Design}
 
 As one of our goal for the prototype is to broaden people's access interactive tools for deep learning, and that the tool is targeted towards non-technical audience, DeepViz is a web-based interactive visualization tool that can be accessed from any modern web-browser. 
@@ -127,11 +138,15 @@ We setup the development environment for the client side application using JavaS
 
 We leverage transpilers to transform code written in JavaScript ES6 into standard ES5 JavaScript that is executable in any browser. We also use bundling and tooling for local development and prototype deployment on the server.
 
+HPC Prince
+
 We use SVG and D3.js for rendering vector graphics for the graph views. For the back-end deep learning framework, we executed all our code on an NVIDIA DGX, a workstation with 4 GPUs, with 16GB of RAM, 10 CPUs and 540GB of RAM.
 
-\section{DeepViz - Visual Exploration Tool}
+\section{Environment Setup}
 
-DeepViz is a visual exploration tool targeted towards the non-technical audience to explore the inference (or predictions) made by a visual classifier, an image recognition deep learning model.
+\section{DeepViz - Visual Exploration Tool - EXPLAIN COMPONENTS}
+
+DeepViz is a visual explanation tool targeted towards the non-technical audience to explore the inference (or predictions) made by a visual classifier, an image recognition deep learning model.
 
 it also enable developers to create interactive and explorable explanations for deep learning models on the web.
 
