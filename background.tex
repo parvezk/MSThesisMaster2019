@@ -223,14 +223,14 @@ These techniques have also been embraced in regulated domains such as employment
 
 Over the past few years, algorithmic fairness and accountability has become a matter of concern for consumer advocates, regulators, policymakers, and even businesses. As society is built upon a fabric of expected behavior and mutual trust \cite{Lipton2018}, it is imperative we design AI systems that respect and fit with the social norms and ensure that their decision making is consistent with the ethical judgment.
 
-With the growing influence of AI and their prevailing impact on the public domain, there is a critical need to better understand their decisions and realize how these models operate.  In a societal context, the reasons for a decision matters a lot. For example, death caused intentionally (murder) vs. death caused unintentionally (manslaughter) are distinct crimes at the court of law. Similarly, a hiring decision made is based (directly or indirectly) on specific protected characteristics such as race, the socio-economic class has a bearing on its legality. However, currently, predictive models are not capable of reasoning this or provide any kind of explanation to their decisions \cite{molnar}.
-
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=1\textwidth]{images/societal-impact-1.jpg}
+\includegraphics[width=1\textwidth]{images/societal-impact.eps}
 \caption{Societal implications of the black box system}
 \label{fig:societal-impacts}
 \end{figure}
+
+With the growing influence of AI and their prevailing impact on the public domain, there is a critical need to better understand their decisions and realize how these models operate.  In a societal context, the reasons for a decision matters a lot. For example, death caused intentionally (murder) vs. death caused unintentionally (manslaughter) are distinct crimes at the court of law. Similarly, a hiring decision made is based (directly or indirectly) on specific protected characteristics such as race, the socio-economic class has a bearing on its legality. However, currently, predictive models are not capable of reasoning this or provide any kind of explanation to their decisions \cite{molnar}.
 
 In this section, we examine the social implications of the black box neural network model, including how the relative opacity is potentially endangering the social equality and its wide-ranging impact in various social domains. We focus our discussion on the societal implication through seven critical themes:
 
@@ -291,9 +291,9 @@ With the growing success of deep learning and neural networks, there is a corres
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=1\textwidth]{images/XAI-concept.eps}
-\caption{Explanation framework}
-\label{fig:Explanation framework}
+\includegraphics[width=1\textwidth]{images/xa-concept-part-1.eps}
+\caption{The Need for Interpretability}
+\label{fig:Why Interpretability Matters}
 \end{figure}
 
 Without a clear understanding of how and why a model works in a certain way, the development of these models relies on a time consuming trial-and-error process. Consequently, both researchers and practitioners are facing challenges with complex models that demand more transparency and explainable systems to better understanding and analysis of these models. Whether it's an financial decision, a medical decision or maybe a military decision, one cannot rely on a black box method. It's time to act on making these decisions more transparent and understandable before the technology becomes even more pervasive.
@@ -315,16 +315,17 @@ In our case, interpretability is the process of generating humanly understandabl
 As deep learning become an indispensable tool for a wide range of applications in business and public domain, it is essential to be able to verify for a certain task that the accuracy results from the proper framing of a problem statement, and there is no exploitation of artifacts in the data. Techniques for interpreting and understanding what the model has learned have therefore become a key ingredient of a robust validation procedure \cite{taylor2006methods} \cite{hansen2011visual} \cite{bach2015pixel}. Interpretability is critical in applications such as medical diagnosis, credit approvals and self-driving cars, where the dependency of the model on the correct features should be guaranteed \cite{Caruana:2015:IMH:2783258.2788613} \cite{bojarski2017explaining}.
 
 \subsection{Explainable Artificial Intelligence}
-Explainable Artificial Intelligence (XAI) is a concept that explains decisions made by the machine learning models and provide justification in a way interpretable by humans. It enables understanding of overall strengths and weaknesses, and conveys an understanding of how the system will behave when implemented in future and how to correct the system’s mistakes. 
-
-The XAI research and proposals offers a shift towards more transparent and explainable AI system. It aims to create a suite of techniques that produce more interpretable models while maintaining high performance levels. This area of research holds substantial promise for improving trust and transparency of AI-based systems.
+Explainable Artificial Intelligence (XAI) is a concept that explains decisions made by the machine learning models and provide justification in a way interpretable by humans. It enables understanding of overall strengths and weaknesses, and conveys an understanding of how the system will behave when implemented in future and how to correct the system’s mistakes.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.55\textwidth]{images/XAI-research-1-crop.png}
-\caption{Emphasis and Scope of XAI Research}
-\label{fig:xai-1}
+\includegraphics[width=1\textwidth]{images/XAI-concept-copy.eps}
+\caption{Explanation framework}
+\label{fig:Explanation framework}
 \end{figure}
+
+
+The XAI research and proposals offers a shift towards more transparent and explainable AI system. It aims to create a suite of techniques that produce more interpretable models while maintaining high performance levels. This area of research holds substantial promise for improving trust and transparency of AI-based systems.
 
 The Defense Advanced Research Projects Agency (DARPA), a division of the Defense Department that explores innovative technologies, is funding several projects that aim to make artificial intelligence more interpretable and explainable. The approaches range from adding further machine-learning systems geared toward providing an explanation, to the development of new machine learning techniques where the elucidation is embedded by design. The initiative involves collaboration with research institutes and academic partners to identify challenges in problem areas and develop interpretable models and explainable AI system.
 
@@ -335,6 +336,13 @@ DARPA program managers recognizes that there is a real advancement happening in 
 DARPA is funding several research groups, which are pursuing a range of approach and techniques to make AI models more explainable. Recently, it released Explainable Artificial Intelligence (DAR, 2016) to encourage research on this topic \cite{Gunning}. The main goal of XAI is to create a suite of machine learning techniques that produce explainable models to enable users to understand, trust, and manage the emerging generation of Artificial Intelligence systems \cite{Gunning2}.
 
 Furthermore, military will be developing several autonomous systems in the coming years that will undoubtedly rely heavily on machine learning techniques like deep learning. Self driving military vehicles, along with aerial drones will be deployed and they will become increasingly capable over time.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.5\textwidth]{images/XAI-research-1-crop.png}
+\caption{Emphasis and Scope of XAI Research}
+\label{fig:xai-1}
+\end{figure}
 
 Historically, there has been occasional interest in explanations of intelligent systems and automated decision making systems over the past decades with expert systems \cite{Abdul}, designed to solve complex problems by reasoning through prior knowledge in the 1970s, Bayesian networks and artificial neural networks [6] in the 1980s, and then the recommendation systems in the 2000s. The recent successes and proliferation of AI and machine learning for wide-ranging large-scale applications and the use of increasingly complex and non-transparent algorithms, necessitates another rise of interest for the need to better understand these systems.
 
