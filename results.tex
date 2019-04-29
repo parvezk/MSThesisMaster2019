@@ -22,7 +22,7 @@ Although a wide variety of techniques are under development in the research and 
 
 For all three methods, we use the VGG16 model, a convolutional neural network based model trained on the imagenet database that we introduced in the previous section.
 
-\section*{Visualizing heatmaps of class activation}
+\section*{Image Receptivity of Feature Map}
 
 This step helps to understand precisely which part of an image identified to belong to a specific class or category (class names known to VGG16), and thus allows localizing objects in images.
 
@@ -41,27 +41,19 @@ We feed the following image of a group of bee-eater sitting on a tree branch as 
 %Class activation heatmap~\ref{fig:heatmap-1}.
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.60\textwidth]{images/heatmap-class-activations.png}
-\caption{Sensitivity Analysis}
+\includegraphics[width=0.50\textwidth]{images/heatmap-class-activations.png}
+\caption{Image Receptivity}
 \label{fig:heatmap-1}
 \end{figure}
 
-\section*{Visualizing filters}
-
-This step that visualizes set of patterns, which is useful to understand precisely what visual patterns or concepts each filter in a layer is receptive to.
-
-\section*{Visualizing intermediate activations}
+\section*{Activation Graph}
 
 This step helped to understand when fed with an input image, how successful layers of the network transformed the input image. It also helped get an idea of the meaning of the individual network filters.
 
 \iffalse
-Figure 3~\ref{fig:layer-activation}.
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=1\textwidth]{images/layer-activations.png}
-\caption{Intermediate outputs}
-\label{fig:layer-activation}
-\end{figure}
+\section*{Visualizing filters}
+
+This step that visualizes set of patterns, which is useful to understand precisely what visual patterns or concepts each filter in a layer is receptive to.
 \fi
 
 Our visualization technique helped to answer two important questions:
@@ -73,7 +65,7 @@ Our visualization technique helped to answer two important questions:
 
 In particular, what is most exciting to note is that the head region of the fourth bird, which is the largest of all six birds are strongly activated: this is probably how the network can tell the difference between bee-eater and any other bird.
 
-% TODO: USER STUDIES%
+\section{User Study}
 
 \iffalse
 RESULTS
