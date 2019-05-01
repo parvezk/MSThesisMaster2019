@@ -12,7 +12,7 @@
 %Artificial Intelligence (AI) is democratized in our everyday life%
 Machine learning now affects many aspects of our lives from web searches, streaming services, recommendations on e-commerce websites, smart speakers, stock predictions to criminal justice and healthcare systems. It is omnipotent in consumer products such as cameras, smartphones and personal assistants. There is a huge incentive for businesses to apply machine learning from enhanced decision making, business forecast, cost reduction, risk management, productivity improvements, as well as the development of new products and services.
 
-Machine learning is a branch of computer science that uses statistical techniques to give computer systems the ability to learn from data, find patterns in data and make highly accurate predictions. In other words, its a set of techniques used to teach computers how to learn, reason, perceive, distinguish, infer, communicate and make decisions like human do. It is a large part of modern artificial intelligence (AI). Here, data encompasses many things such as words, numbers, images, video and more. Machine learning learns from the experience, following a pathway that nature took millions of year ago \cite{sammut2011encyclopedia}. It's a paradigm shift from the 'normal' programming where all the instructions must be given explicitly to the computer to 'indirect' programming where the computer learns itself from the data without being explicitly programmed .
+Machine learning is a branch of computer science that uses statistical techniques to give computer systems the ability to learn from data, find patterns in data and make highly accurate predictions. In other words, its a set of techniques used to teach computers how to learn, reason, perceive, distinguish, infer, communicate and make decisions like human do. It is a large part of modern artificial intelligence (AI). Here, data encompasses many things such as words, numbers, images, video and more. Machine learning learns from the experience, following a pathway that nature took millions of year ago \cite{sammut2011encyclopedia}. It's a paradigm shift from the 'normal' programming where all the instructions must be given explicitly to the computer to 'indirect' programming where the computer learns itself from the data without being explicitly programmed.
 
 Not very long ago, to say that computer vision could compete with the visual abilities of a one-year-old was seemingly a paradox\cite{sejnowski2018deep}. It is no longer valid. Machine learning techniques can now recognize objects in an image as well as an adult can, digitize handwritten characters, transcribe speech into text, classify wine types, support diagnosis of severe diseases, match news item or product with user's interest and select results relevant to the search. Then there are self-driving cars \cite{sejnowski2018deep} on the road that can drive safely than an average person. 
 
@@ -89,12 +89,14 @@ In mid-1990, Artificial neural networks were introduced by researchers, and they
 
 Deep learning is a super set of the machine learning domain. It is fair to say that neural networks were reincarnated around 2010 with “deep learning” as a new name, largely a result of much faster and larger computing systems, in addition to some new ideas. \cite{efron2016computer}.
 
+\iffalse
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.85\textwidth]{images/timeline-1.png}
 \caption{History and Timeline}
 \label{fig:timeline}
 \end{figure}
+\fi
 
 In the last decade, deep learning has been applied to various technologies and applications \cite{dl_evolution} that require large volumes of digital data for training and providing useful information (Chen and Lin, 2014). Recently, they have has been advancing the state-of-the-art in artificial intelligence, and had led to major breakthrough in many areas such as computer vision (CV) \cite{krizhevsky2012imagenet} \cite{karpathy2014large}, speech recognition \cite{graves2013speech} \cite{mohamed2012acoustic}, and natural language processing \cite{bengio2003neural} \cite{mikolov2013distributed} \cite{mikolov2010recurrent}.
 
@@ -112,6 +114,7 @@ We broadly survey the types of neural network to provide general insight and tak
 \item Convolutional Neural Networks (CNN)
 \item AutoEncoders (Unsupervised Pretrained Networks)
 \end{itemize}
+
 
 \subsection{Perceptrons}
 
@@ -285,6 +288,8 @@ Causal inference methods focus solely on extracting causal relationships from da
 
 \section{Interpretable and Explainable System}
 
+The research of interpretability investigates how to make sense of what specific feature a network has detected, to what inputs neurons are most receptive to and how does that correlate to the class prediction. We studied existing methods for interpretability, a general approach to how neural network learns and operates internally that considers the magnitude of each detected feature inside hidden layers.
+
 \subsection{Why Interpretability Matters}
 
 While artificial intelligence (AI) has existed for over sixty years, but the real-world application has increased only in the last decade due to factors discussed in the above section: the recent surge in data and the rise in computing power together with better algorithms.
@@ -349,7 +354,7 @@ Furthermore, military will be developing several autonomous systems in the comin
 
 Historically, there has been occasional interest in explanations of intelligent systems and automated decision making systems over the past decades with expert systems \cite{Abdul}, designed to solve complex problems by reasoning through prior knowledge in the 1970s, Bayesian networks and artificial neural networks [6] in the 1980s, and then the recommendation systems in the 2000s. The recent successes and proliferation of AI and machine learning for wide-ranging large-scale applications and the use of increasingly complex and non-transparent algorithms, necessitates another rise of interest for the need to better understand these systems.
 
-XAI has been gaining increasing attention lately with several conference series dedicated exclusively to the topic of interpretability, transparency, fairness and accountability. Broadly, XAI landscape can be divided into two research groups (i) a group of academic institutions, non-profit research labs and firms in the regulated industries (such as credit, insurance and finance) and (ii) civilian and military researchers funded by DARPA. The former group is mainly focused on promoting fairness and transparency in algorithmic decision-making with social and commercial impact.
+XAI has been gaining increasing attention lately with several conference series dedicated exclusively to the topic of interpretability, transparency, fairness and accountability. Broadly, XAI landscape can be divided into two research groups (i) a group of academic institutions, non-profit research labs and firms in the regulated industries (such as credit, insurance and legal system) and (ii) civilian and military researchers funded by DARPA. The former group is mainly focused on promoting fairness and transparency in algorithmic decision-making with social and commercial impact.
 
 \subsection{Visualization and Interpretability}
 

@@ -124,12 +124,43 @@ A model summary and list of hidden layers in VGG16 in Table~\ref{table:vgg16-lay
 %\textbf{Trainable parameters}: 138357544 \newline
 %\textbf{Non-trainable parameters}: 138357544 \newline
 
-\appendix{Appendix}
+\appendixsection{Meat of the Appendix}
+\label{table4}
 
-%\appendixsection*{Background}
-%\label{sec:back}
+\begin{table}[!t]
+  \renewcommand{\arraystretch}{1.3}
+  \centering
 
-%\appendixsection*{Methodologies}
-%\label{sec:meat}
+  \caption{ List of edge vectors for a codebook with b=16 and d=3, for
+    a $2 \times 2$ vector size.}
+  \label{table4}
 
+  \begin{tabular}{|c|c|} \hline
+    Level & Edge Vectors \\ \hline
+
+    & (9)\\
+    & (10)\\
+    L1 & (11)\\
+    & (12)\\
+    & (13) \\ \hline
+
+    L2 & (6,0)\\
+    & (6,3) \\ \hline
+
+    & (2,2,8)\\
+    & (6,5,1)\\
+    & (6,5,4)\\
+    & (6,5,6)\\
+    & (6,5,7)\\
+    & (6,5,8)\\
+    L3 & (6,5,15)\\
+    & (7,0,14)\\
+    & (8,0,1)\\
+    & (8,15,3)\\
+    & (8,15,4)\\
+    & (8,15,10) \\ \hline
+
+  \end{tabular}
+
+\end{table}
 
