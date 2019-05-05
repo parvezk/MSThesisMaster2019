@@ -630,8 +630,8 @@
         \rule{2.6in}{1pt} \hspace{0.3in}  \rule{2.6in}{1pt}\\[-3pt]
         \makebox[2.6in][l]{\Zmajorprof} \hspace{0.3in}
         \makebox[2.6in][l]{\Zfirstreader}\\
-        \makebox[2.6in][l]{Major Professor} \hspace{0.3in}
-        \makebox[2.6in][l]{Committee Member}
+        \makebox[2.6in][l]{Thesis Instructor} \hspace{0.3in}
+        \makebox[2.6in][l]{Project Advisor}
         \null\vskip 2\baselineskip
 
         % PhD committees have 5 members, so we need extra signature
@@ -641,8 +641,8 @@
             \rule{2.6in}{1pt} \hspace{0.3in}  \rule{2.6in}{1pt}\\[-3pt]
             \makebox[2.6in][l]{\Zsecondreader} \hspace{0.3in}
             \makebox[2.6in][l]{\Zthirdreader}\\
-            \makebox[2.6in][l]{Committee Member} \hspace{0.3in}
-            \makebox[2.6in][l]{Committee Member}
+            \makebox[2.6in][l]{IDM Faculty Reader} \hspace{0.3in}
+            \makebox[2.6in][l]{NYU Faculty Reader}
             \null\vskip 2\baselineskip
         }
         % Format of the last row of signatures depends on whether or not this
@@ -692,7 +692,7 @@
 
 %{{{ Signature page - I think this is legacy and not used any more
 \def\makesignature{\newpage\null\vskip 54pt
-    \begin{center} UTAH STATE UNIVERSITY \\[2\baselineskip] \end{center}
+    \begin{center} NEW YORK UNIVERSITY \\[2\baselineskip] \end{center}
     \begin{flushright} {\Zmonth, \Zyear} \end{flushright}
     \par\noindent We hereby recommend that the \Zdocument\
     \uppercase\expandafter{\Ztitle}\ prepared under our supervision by
