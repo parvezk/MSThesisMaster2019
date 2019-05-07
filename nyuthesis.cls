@@ -768,10 +768,10 @@
 %    \clearpage
     \refstepcounter{section}
     \addcontentsline{toc}{chapter}{\@@bibname} % Don't add to table of contents
-    \begin{doublespace}
+    \begin{singlespace}
         \bibliography{#1}
         \bibliographystyle{#2}
-    \end{doublespace}
+    \end{singlespace}
 }
 %}}}
 

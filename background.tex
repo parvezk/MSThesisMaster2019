@@ -35,11 +35,11 @@ Thanks to Moore’s law, processor chips continue to shrink in size, while incre
 
 GPUs were first designed to boost speed and processing power in gaming industries give gamers a rich, high-speed 3D visual experiences. These were found to be twenty to fifty times more efficient than traditional central processing units (CPUs) for machine learning and deep learning computations \cite{Yosinski2015}.
 
-Open AI, a non-profit research organization that promotes AI safety, remarks[]- \begin{quote}
+Open AI, a non-profit research organization that promotes AI safety, remarks\cite{aicompute} - \begin{quote}
     \textit{Improvements in computing have been a key component of AI progress, so as long as this trend continues, it’s worth preparing for the implications of systems far outside today’s capabilities.}
 \end{quote}
 
-An example of this is in speech recognition, where a computer has to perform millions of calculation per second for a system to learn and recognize patterns in the data — This task required tremendous computational power that, until quite recently wasn't available. In contrast, Marvin Minsky, a pioneering mathematician and leading scientist from MIT who worked on AI in 1957 when computers were billions of time slower than they are now. Those machines were costly and provided merely a fraction of the performance and computing speed.
+An example of this is in speech recognition, where a computer has to perform millions of calculation per second for a system to learn and recognize patterns in the data — This task required tremendous computational power that, until quite recently wasn't available. In contrast, Marvin Minsky, a pioneering mathematician and scientist from MIT worked on AI in 1957 when computers were billions of time slower than they are now. Those machines were costly and provided merely a fraction of the performance and computing speed.
 
 \subsection{Inventive Algorithms}
 %TODO: Consider Changing to - Algorithmic Innovation%
@@ -47,9 +47,11 @@ The data explosion and advances in computing power has made it possible for bett
 
 Traditionally, algorithms were programmed explicitly by humans to perform various tasks. Modern algorithms have become sophisticated to the point where they can facilitate machine learning and allow computers to self-learn from the data. Until recently there hasn't been adequate data, either structured or unstructured to train computers to perform complex tasks on their own, let alone develop sophisticated algorithms that allowed machines to train themselves. 
 
-An example of this is the autonomous vehicles car that rely on an enriched visual dataset to construct their own map real-time and navigate the roads[]. Here, each frame of the video collected by a self-driving car must be enriched with data to identify objects such as a road sign, pedestrian, tree or sidewalks, in every frame.
+An example of this is the autonomous vehicles car that rely on an enriched visual dataset to construct their own map real-time and navigate the roads \cite{shannon_mattern} \cite{tesla_autopilot}. Here, each frame of the video collected by a self-driving car must be enriched with data to identify objects such as a road sign, pedestrian, tree or sidewalks, in every frame.
 
-According to AI expert and MIT Sloan professor Erik Brynjolfsson[], there has been a radical improvement in the development of algorithms in computer science. Some of them were first introduced 30 or 40 years ago, they have now been tweaked and improved drastically by faster computers and massive volumes of data. With this, It became more convenient to figure out what works and doesn't work over time.
+According to AI expert and MIT Sloan professor Erik Brynjolfsson[], there has been some significant improvements of these algorithms in the field of machine learning that have improved on the basic algorithms. Some of them were first introduced 30 or 40 years ago, but they have now been tweaked and improved by the virtue of faster computing and huge volumes of data. This makes it more convenient to figure out what works and doesn't work over time.
+
+These three things combined, computing power, volumes of data and better algorithms could provide as much as a million-fold improvement on some application from image recognition and speech synthesis to self-driving cars.
 
 \section{The Dawn of Neural Networks}
 In mid-1990, Artificial neural networks were introduced by researchers, and they marked a paradigm shift of predictive modeling from the world of applied statistics towards computer science and machine learning \cite{efron2016computer}.
@@ -76,43 +78,6 @@ The origin of deep learning goes back to the birth of artificial intelligence in
 In 1956, John McCarthy, a Mathematics Professor at Dartmouth College proposed a workshop called Dartmouth Summer Research Project on Artificial Intelligence \cite{edselc.2-52.0-3384609253620061201}, which gave birth to the field of AI and motivated a generation of scientists and experts to explore the untapped potentials for information technology to match the capabilities of humans \cite{sejnowski2018deep}.
 
 In 1956, Frank Rosenblatt, a psychologist at Cornell University, aimed to create brain analogue useful for analytical tasks \cite{2016397}.  He invented a simple technique for simulating neuron in hardware and software. This marked the inception of the research in field of enabling machines to learn and classify in human. Rosenblatt proposed ‘perceptron’ a single layer neural network for binary classification that could learn how to sort simple images into categories - for instance, squares and triangles. Perceptron went on to be the basis of further research that culminated into the creation of multi-layer learning networks, which have formed the basis of modern deep learning\cite{2016397}.
-
-
-
-\usepackage[utf8]{inputenc}
-\usepackage[TS1,T1]{fontenc}
-\usepackage{fourier, heuristica}
-\usepackage{array, booktabs}
-\usepackage{graphicx}
-\usepackage[x11names,table]{xcolor}
-\usepackage{caption}
-\DeclareCaptionFont{blue}{\color{LightSteelBlue3}}
-
-\newcommand{\foo}{\color{LightSteelBlue3}\makebox[0pt]{\textbullet}\hskip-0.5pt\vrule width 1pt\hspace{\labelsep}}
-
-
-
-\begin{table}
-\renewcommand\arraystretch{1.4}\arrayrulecolor{LightSteelBlue3}
-\captionsetup{singlelinecheck=false, font=blue, labelfont=sc, labelsep=quad}
-\caption{Timeline}\vskip -1.5ex
-\begin{tabular}{@{\,}r <{\hskip 2pt} !{\foo} >{\raggedright\arraybackslash}p{5cm}}
-\toprule
-\addlinespace[1.5ex]
-1947 & AT and T Bell Labs develop the idea of cellular phones\\
-1968 & Xerox Palo Alto Research Centre envisage the 'Dynabook\\
-1971 & Busicom 'Handy-LE' Calculator\\
-1973 & First mobile handset invented by Martin Cooper\\
-1978 & Parker Bros. Merlin Computer Toy\\
-1981 & Osborne 1 Portable Computer\\
-1982 & Grid Compass 1100 Clamshell Laptop\\
-1983 & TRS-80 Model 100 Portable PC\\
-1984 & Psion Organiser Handheld Computer\\
-1991 & Psion Series 3 Minicomputer\\
-\end{tabular}
-\end{table}
-
-
 
 In the last decade, deep learning has been successfully applied to a variety of domains and applications \cite{dl_evolution} that require large volumes of digital data for training and providing useful information. Recently, they have has been advancing the state-of-the-art in artificial intelligence, and had led to major breakthrough in many areas such as computer vision (CV) \cite{krizhevsky2012imagenet} \cite{karpathy2014large}, speech recognition \cite{graves2013speech} \cite{mohamed2012acoustic}, and natural language processing \cite{bengio2003neural} \cite{mikolov2013distributed} \cite{mikolov2010recurrent}.
 
@@ -201,6 +166,7 @@ A simple example of a computer vision model Fig.~\ref{fig:CNN-2}.
 
 The broad range of CNN model families include (1) CNNs with fully-connected layers (e.g. VGG), (2) CNNs used for structured outputs (e.g. captioning), (3) CNNs used in tasks with multi-modal inputs (e.g. VQA) or reinforcement learning.
 
+\vspace{15mm}
 
 \subsection{Tasks}
 \begin{itemize}
@@ -235,7 +201,7 @@ Unlike in supervised learning problems, in reinforcement-learning problems, ther
 
 \section{The Advent of Black Box Models}
 
-Deep learning models are hard to interpret than most existing machine learning models \cite{Kahng2018} because of its large number of layers and parameters, multiple types of non-linear activation functions and randomized gradient descent training process, understanding these models remains a fundamental challenge and because of this, the deep neural network is often considered as “black box \cite{dlvwz}.” Although there has been some effort lately in the machine learning and human-computer interaction community to shed light on their inner-workings, most observers would acknowledge that neural networks as a whole remains a black box.
+Deep learning models are harder to interpret than most existing machine learning models \cite{Kahng2018} because of its large number of layers and parameters, multiple types of non-linear activation functions and randomized gradient descent training process, understanding these models remains a fundamental challenge and because of this, the deep neural network is often considered as “black box \cite{dlvwz}.” Although there has been some effort lately in the machine learning and human-computer interaction community to shed light on their inner-workings, most observers would acknowledge that neural networks as a whole remains a black box.
 
 \begin{figure}[htbp]
 \centering
@@ -244,7 +210,7 @@ Deep learning models are hard to interpret than most existing machine learning m
 \label{fig:Blackbox AI system}
 \end{figure}
 
-Due to their internal complexities and non-linear structure \cite{Samek}, the underlying decision-making processes for why the models are achieving such performance are the challenge and sometimes mystifying to interpret. Therefore, in practice, users often use them as a black box and cannot explain how learning from input data was done nor how performance can be consistently optimized due to which the development of the model largely depends on the trial-and-error process. It could also be detrimental when the model does not perform satisfactorily; users would not understand the causes or know how to fix the problem. 
+Due to their internal complexities and non-linear structure \cite{Samek}, the underlying decision-making processes for why the models are achieving such performance are the challenge and sometimes mystifying to interpret. Therefore, in practice, users often approach them as a black box and cannot explain how learning from input data was done nor how performance can be consistently optimized due to which the development of the model largely depends on the trial-and-error process. It could also be detrimental when the model does not perform satisfactorily; users are not able to understand the causes or know how to fix the problem. 
 
 Generally, the information stored in a neural network is a set of numerical weights and connections that provide no direct evidence as for how to the task is executed or what is the association between inputs and outputs \cite{Tzeng2005}. The opaque nature of these models also limits their usage and acceptance in high-end science and engineering applications since it is demanded to use methods and techniques based on functions that can be understood and validated.
 
@@ -265,22 +231,15 @@ Further, traditional analysis with dense network is complicated because of the i
 
 \section{Societal Implications}
 
-As AI democratizes in our life and permeates every aspect of our social lives from the social media platforms, smart speakers and streaming services to our criminal justice system and healthcare, it is now deeply embedded in business decisions, both routine and high stakes because they provide superior performance and promise to improve the consistency and quality of decision-making. 
+AI has been democratized in our life, and now permeates every aspect of our social lives from the social media platforms, streaming services, smart-speakers to healthcare system. It is now deeply embedded in various business decisions, both routine and high stakes because they promise to provide superior performance and improve the consistency and quality of the decision-making. 
 
-These techniques have also been embraced in regulated domains such as employment, credit, and insurance, where critical decisions like who gains access to healthcare, who’s approved for a loan, who gains access to critical opportunities and criminal risk assessment \cite{ainow2018} depends on the output of the machine learning model. Yet there is a growing perception an concern that these learning models from historical data can end up encoding human biases and prejudice they promised to alleviate.
+These techniques have also been embraced in regulated domains such as employment, credit, and insurance, where critical decisions like who gains access to healthcare, who’s approved for a loan, who gains access to critical opportunities and criminal risk assessment \cite{ainow2018} depends on the output of the machine learning model. Yet there is a perception and emerging concern that these learning algorithms from historical data can end up encoding human biases and prejudice they promised to alleviate.
 
-Over the past few years, algorithmic fairness and accountability has become a matter of concern for consumer advocates, regulators, policymakers, and even businesses. As society is built upon a fabric of expected behavior and mutual trust \cite{Lipton2018}, it is imperative we design AI systems that respect and fit with the social norms and ensure that their decision making is consistent with the ethical judgment.
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=1\textwidth]{images/societal-impact-copy.eps}
-\caption{Societal implications of the black box system}
-\label{fig:societal-impacts}
-\end{figure}
+Over the past few years, algorithmic fairness and accountability has become a matter of concern for consumer advocates, regulators, policymakers, civil right groups and even businesses. Society is built upon a fabric of expected behavior and mutual trust \cite{Lipton2018}. In order for these models to be accepted by society, they need to know the rationales for their decision and understand know why they’re making the decisions they’re making. It is also important we design AI systems that respect and fit with the social norms and ensure that their decision making is consistent with the ethical judgment and human rights.
 
 With the growing influence of AI and their prevailing impact on the public domain, there is a critical need to better understand their decisions and realize how these models operate.  In a societal context, the reasons for a decision matters a lot. For example, death caused intentionally (murder) vs. death caused unintentionally (manslaughter) are distinct crimes at the court of law. Similarly, a hiring decision made is based (directly or indirectly) on specific protected characteristics such as race, the socio-economic class has a bearing on its legality. However, currently, predictive models are not capable of reasoning this or provide any kind of explanation to their decisions \cite{molnar}.
 
-In this section, we examine the social implications of the black box neural network model, including how the relative opacity is potentially endangering the social equality and its wide-ranging impact in various social domains. We focus our discussion on the societal implication through seven critical themes:
+In this section, I examine the social implications of the black box model, including how the relative opacity of the model is potentially endangering the social equality and its wide-ranging impact on various social domains. I focus my discussion on the societal implication through six critical themes:
 
 \begin{enumerate}
 \item \textbf{Trust}
@@ -293,11 +252,18 @@ In this section, we examine the social implications of the black box neural netw
 
 We selected these themes because they are overarching concerns in the public domain. We discuss the harmful effect in each of these areas and identify emerging challenges in the present and future. In our discussion about these themes, we also ask the underlying questions such as: what are the current social and economic challenges faced by the rapid integration of AI, and how we can build a deeper understanding of AI \cite{Solon2017} in the present time that will help us create a fair and equitable future?
 
-The wide-ranging impact in these selected themes makes it essential to look at how these automated decision-making systems are being applied now in regulated industries, whom they are benefiting, whom they are undermining, and how they are structuring the socio-economic aspect of society and individuals \cite{ainow2016report}.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1\textwidth]{images/societal-impact-copy.eps}
+\caption{Societal implications of the black box system}
+\label{fig:societal-impacts}
+\end{figure}
+
+The wide-ranging impact in these selected themes makes it essential to look at how these automated decision-making systems are being applied now in regulated industries, whom they are benefiting, whom they are undermining, and how they are structuring the socio-economic aspect of society and individuals\cite{ainow2016report}.
 
 \subsection{Trust}
 
-Humans find it easier to trust a system that explains its decisions compared to a black box. AI and deep learning to be confidently rolled out by industries and governments, users demand greater transparency through explanations and justification of their decisions \cite{molnar}. It is an essential condition, not only for risk management but also to establish greater trust from the general public as well as regulators and supervisors in financial services.
+Humans find it easier to trust a system that explains its decisions compared to a black box. For AI and deep learning to be confidently rolled out by industries and governments, users demand greater transparency through explanations and justification of their decisions \cite{molnar}. It is an essential condition, not only for risk management but also to establish greater trust from the general public as well as regulators and supervisors in financial services.
 
 
 \subsection{Transparency}
@@ -306,7 +272,7 @@ Transparency is the opposite of opacity or the notion of black box”. Transpare
 
 \subsection{Ethics}
 
-The concerns over the accountability and fairness of modern AI systems extends well into the ethical and legal domains. The ethical questions surrounding AI systems are wide-ranging, extending from its creation, uses and outcomes. There are critical questions posed by the advocates of ethical AI such as, How do we delegate power and decision-making to AI systems? \cite{ainow2016report} How do we integrate specific ethical concerns within the systems? It is important to consider which set of values and interests are reflected in AI, as well as how machines can recognize values and ethical paradigms we humans care. AI ethics spans broader social concerns about the effects of AI systems and the different choices made during its development.
+The concerns over the accountability and fairness of modern AI systems extend well into the ethical and legal domains. The ethical questions surrounding AI systems are wide-ranging, extending from its creation, uses and outcomes. There are critical questions posed by the advocates of ethical AI such as, How do we delegate power and decision-making to AI systems? \cite{ainow2016report} How do we integrate specific ethical concerns within the systems? It is important to consider which set of values and interests are reflected in AI, as well as how machines can recognize values and ethical paradigms we humans care. AI ethics spans broader social concerns about the effects of AI systems and the different choices made during its development.
 
 \subsection{Fairness and Inclusion}
 
@@ -324,8 +290,7 @@ Interpretability is especially critical if we want to consider autonomous vehicl
 
 \subsection*{Causality}
 
-The use of proxy features during feature selection pose greater risk 
-The model should ensure that it considers only causal relationships.  The system can only be compromised if the inputs are proxies for a causal feature, but do not cause the outcome. Hence proxy features should be avoided as they make models vulnerable \cite{molnar}.
+The use of proxy features during feature selection pose greater risk the model should ensure that it considers only causal relationships. The system can only be compromised if the inputs are proxies for a causal feature, but do not cause the outcome. Hence proxy features should be avoided as they make models vulnerable \cite{molnar}.
 
 Causal inference methods focus solely on extracting causal relationships from data, i.e. statements that altering one variable will cause a change in another. In contrast, interpretable ML, and most other statistical techniques, are generally used to describe non-causal relationships, or relationships in. The model should ensure that it considers only causal relationships when it comes to feature selection.
 
