@@ -132,6 +132,16 @@
 \usepackage{svg}
 \usepackage{amsmath}
 
+\usepackage{geometry}
+\usepackage{array, booktabs}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{caption}
+
+\DeclareCaptionFont{blue}{\color{LightSteelBlue3}}
+\newcommand{\foo}{\color{LightSteelBlue3}\makebox[0pt]{\textbullet}\hskip-0.5pt\vrule width 1pt\hspace{\labelsep}}
+%%%%%%%%%%%%%%
+
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{nyuthesis}[2019/04/223 Revised NYU thesis class]
 
@@ -537,6 +547,9 @@
 }
 {
     \end{doublespace}
+    % place page count at the end of the abstract
+    \par \bigskip
+    \hfill (\ref{totalpageno} pages)
 }
 
 %{{{{ Abstract page environment
