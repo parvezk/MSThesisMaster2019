@@ -179,9 +179,9 @@ The broad range of CNN model families include (1) CNNs with fully-connected laye
 \item Causal Modelling
 \end{itemize}
 
-\subsection{Task Types}
+\subsection{Types of Learning}
 
-Machine learning can be classified into three categories (i) Supervised or semi-supervised learning (ii) Unsupervised Learning and (iii) Reinforcement Learning.
+There are different types of learning process. Learning can be supervised, semi-supervised, unsupervised and reinforcement.
 
 \subsection*{Supervised learning}
 
@@ -233,7 +233,7 @@ AI has been democratized in our life, and now permeates every aspect of our soci
 
 These techniques have also been embraced in regulated domains such as employment, credit, and insurance, where critical decisions like who gains access to healthcare, who’s approved for a loan, who gains access to critical opportunities and criminal risk assessment \cite{ainow2018} depends on the output of the machine learning model. Yet there is a perception and emerging concern that these learning algorithms from historical data can end up encoding human biases and prejudice they promised to alleviate.
 
-Over the past few years, algorithmic fairness and accountability has become a matter of concern for consumer advocates, regulators, policymakers, civil right groups and even businesses. Society is built upon a fabric of expected behavior and mutual trust \cite{Lipton2018}. In order for these models to be accepted by society, they need to know the rationales for their decision and understand know why they’re making the decisions they’re making. It is also important we design AI systems that respect and fit with the social norms and ensure that their decision making is consistent with the ethical judgment and human rights.
+Over the past few years, algorithmic bias and fairness question has become a matter of concern for consumer advocates, regulators, policymakers, civil right groups and even businesses. Society is built upon a fabric of expected behavior and mutual trust \cite{Lipton2018}. In order for these models to be accepted by society, they need to know the rationales for their decision and understand know why they’re making the decisions they’re making. It is also important we design AI systems that respect and fit with the social norms and ensure that their decision making is consistent with the ethical judgment and human rights.
 
 With the growing influence of AI and their prevailing impact on the public domain, there is a critical need to better understand their decisions and realize how these models operate.  In a societal context, the reasons for a decision matters a lot. For example, death caused intentionally (murder) vs. death caused unintentionally (manslaughter) are distinct crimes at the court of law. Similarly, a hiring decision made is based (directly or indirectly) on specific protected characteristics such as race, the socio-economic class has a bearing on its legality. However, currently, predictive models are not capable of reasoning this or provide any kind of explanation to their decisions \cite{molnar}.
 
@@ -317,18 +317,46 @@ Over the last few years, algorithmic fairness and accountability has been a matt
 
 Further, the report upholds that it is not acceptable to implement an artificial intelligence system that could have a substantial impact on an individual's life unless it can provide a comprehensive and satisfactory explanation for the decisions it makes. It means delaying their deployment and use for such cases until the system has been vetted and a credible alternative solution is found.
 
-As deep learning spreads across domains, it is of paramount importance that we equip users of deep learning with tools for understanding when a model works correctly, when it fails, and ultimately how to improve its performance.
+As deep learning spreads across domains, it is of paramount importance that we equip users of deep learning with tools for understanding when a model works correctly, when it fails, and ultimately how to improve its performance. As deep learning more pervasive in public domains, it is essential to be able to verify for a certain task that the accuracy results from the proper framing of a problem statement \cite{Liu2017}, and there is no exploitation of artifacts in the data. Techniques for interpreting and understanding what the model has learned have therefore become a key ingredient of a robust validation procedure \cite{taylor2006methods} \cite{hansen2011visual} \cite{bach2015pixel}. Interpretability is critical in applications such as medical diagnosis, credit approvals and self-driving cars, where the dependency of the model on the correct features should be guaranteed \cite{Caruana:2015:IMH:2783258.2788613} \cite{bojarski2017explaining}.
 
 \subsection{Interpretable Methods}
 
-The concept of interpretability center around human understanding and other things. In the context of neural networks, they vary in the aspect of the model to be understood: its internals, operations, mapping of data, or representation. Although recent work has begun to standardize the definition of interpretability \cite{Lipton2018}, a formal and universally agreed-upon definition remains open.
+In this section, I briefly discuss the concept of interpretabiltiy in the context of neural networks and then explore methods for interpreting and understand deep neural networks.
 
-Interpretability is defined as the point to which a human can understand the causes of a decision. Another definition is that interpretability is the degree to which a human can consistently predict the model’s result \cite{molnar}. The higher the interpretability of a machine learning model, the easier it is for someone to comprehend why certain decisions or predictions have been made. A model is better interpretable when its decisions are more accessible for a human to comprehend than decisions made by them \cite{molnar}.
+Interpretability is defined as the point to which a human can understand the causes of a decision. Another definition is that interpretability is the degree to which a human can consistently predict the model’s result \cite{molnar}. The higher the interpretability of a machine learning model, the easier it is for someone to understand why certain decisions have been made. A model is better interpretable when its decisions are more accessible for a human to comprehend than decisions made by them \cite{molnar}.
+
+In general, the concept of interpretability center around human understanding and comprehension of object in question. But in the context of neural networks, they vary in the aspect of the model to be understood: its internals, operations, mapping of data, or representation. Although recent work has begun to standardize the definition of interpretability \cite{Lipton2018}, a formal and commonly agreed-upon definition remains open.
     
-In our case, interpretability is the process of generating humanly understandable explanations of why a deep learning model makes a particular decision \cite{Sacha2017}. Since the learning system hides the entire decision process behind the complicated inner-workings of deep learning models, it becomes difficult to obtain interpretations and explanations for their decisions.
+In our case, interpretability is the process of generating humanly understandable explanations of why a neural network model makes a particular decision \cite{Sacha2017}. Since the learning system hides the entire decision process behind the complicated inner-workings of deep neural networks, it becomes difficult to obtain interpretations and explanations for their decisions.
+...Interpretability  is useful in three ways:
+[*] UNDERSTANDING
+[*] DEBUGGING
+[*] REFINEMENT
 
-As deep learning become an indispensable tool for a wide range of applications in business and public domain, it is essential to be able to verify for a certain task that the accuracy results from the proper framing of a problem statement \cite{Liu2017}, and there is no exploitation of artifacts in the data. Techniques for interpreting and understanding what the model has learned have therefore become a key ingredient of a robust validation procedure \cite{taylor2006methods} \cite{hansen2011visual} \cite{bach2015pixel}. Interpretability is critical in applications such as medical diagnosis, credit approvals and self-driving cars, where the dependency of the model on the correct features should be guaranteed \cite{Caruana:2015:IMH:2783258.2788613} \cite{bojarski2017explaining}.
+\subsection{Information Visualization}
+[*] RE-STRUCTURE SECTION
+[*] More than ever, data visualization has become critical to the field of AI.
+Information visualization is the study and usage of visual representation of abstract data to reinforce human cognition. It can help with the discovery of unstructured actionable insight, exploring and understanding the patterns in the data to communicate essential aspects of your data set in a concise, easy-to-understand fashion.
 
+Data analysis is an indispensable part of the machine learning project pipeline, in both business and research projects. The AI development pipeline often begins with data exploration phase, also known as exploratory data analysis to help with data analysis and evaluate approaches for the problem at hand. It has primarily been done using fundamental data analysis approach in visualization such as histograms, plots, charts, graphs and other types.
+
+\subsection{Visualization and Interpretability}
+
+[*] In this section, I highlight key initiatives in the area of machine learning interpretability and review the visualization toolkit and open source libraries available to interpret deep neural networks.
+
+With the growing complexity of AI models and the critical need for understanding their inner-workings has increased. Visualization is potentially a powerful tool to fill this critical need. It can be used to explain the rationales of an AI decisions, including building confidence about how they will behave in the real-world, detecting bias and prejudice, and also for scientific curiosity.
+
+Visualization can played an important role in enhancing the interpretability and explainability of the deep learning models. It provide an in-depth understanding of how deep learning models work. Combined with XAI explanation approach, it can help bring more insight into the often obfuscated complex AI system. It can be used to explain how AI techniques work and help demystify the training and inference process of the model.
+
+Visualizing and interpreting neural network through visualization is currently emerging as a promising research field. it has also attracted research at the intersection of machine learning, information visualization and human-computer interaction (HCI) to build unique solutions with effective human interactions and experience design \cite{Dudley2018}. The growing interest in this field has been reflected in several international conferences and workshops, dedicated exclusively to the topics of interpretability and visualization for machine learning at Visualization for Machine Learning (2018) \cite{visml2018}. These topics has also become the key concerns in panel discussion at premier venues such as NeuRIPS 2016 Workshop on Interpretable ML for Complex Systems \cite{imlcs2016}and ACM Intelligent User Interfaces workshop on Explainable Smart Systems (EXSS 2018) \cite{exss2018}. Besides, there is a growing number of research papers related to visualization and interpretability for deep learning has been published.
+
+[*] CONVNET.JS [*] CITE ANDERJ
+
+[*] CITE BIG PICTURES
+TensorFlow Playground is a web-based interactive visualization of neural networks for education and intuitive learning and understanding, where users can play with a basic neural network by changing different configurations such as the width and depth of hidden layers, manage dataset ratio and batch size of dataset, activation type, learning and regularization rate, and types of non-linear activation units. It utilizes two-dimensional toy data sets for problem types such as classification and regression tasks. The manner in which each node in the network is activated across different input data values is fully visualized as a heatmap in a two-dimensional space.
+
+[*] VISDOM
+[*] CITE FB
 \subsection{Explainable Artificial Intelligence}
 Explainable Artificial Intelligence (XAI) is a concept that explains decisions made by the machine learning models and provide justification in a way interpretable by humans \cite{Gunning}. It enables understanding of overall strengths and weaknesses, and conveys an understanding of how the system will behave when implemented in future and how to correct the system’s mistakes \cite{Gunning}.
 
@@ -362,31 +390,21 @@ Furthermore, military will be developing several autonomous systems in the comin
 
 XAI has been gaining increasing attention lately with several conference series dedicated exclusively to the topic of interpretability, transparency, fairness and accountability. Broadly, XAI landscape can be divided into two research groups (i) a group of academic institutions, non-profit research labs and firms in the regulated industries (such as credit, insurance and legal system) and (ii) civilian and military researchers funded by DARPA. The former group is mainly focused on promoting fairness and transparency in algorithmic decision-making with social and commercial impact.
 
-\subsection{Visualization and Interpretability}
-
-With the growing complexity of AI models and the critical need for understanding their inner-workings has increased. Visualization is potentially a powerful tool to fill this critical need. It can be used to explain the rationales of an AI decisions, including building confidence about how they will behave in the real-world, detecting bias and prejudice, and also for scientific curiosity.
-
-Visualization can played an important role in enhancing the interpretability and explainability of the deep learning models. Combined with XAI explanation approach, it can help bring more insight into the often obfuscated complex AI system. It can be used to explain how AI techniques work and help demystify the training and inference process of the model.
-
-Interactive visualization can help provide an in-depth understanding of how deep learning models work. TensorFlow Playground is a web-based interactive visualization of neural networks for education and intuitive learning and understanding, where users can play with a basic neural network by changing different configurations such as the width and depth of hidden layers, manage dataset ratio and batch size of dataset, activation type, learning and regularization rate, and types of non-linear activation units. It utilizes two-dimensional toy data sets for problem types such as classification and regression tasks. The manner in which each node in the network is activated across different input data values is fully visualized as a heatmap in a two-dimensional space.
-
-Interactive visualization plays a critical role in enhancing the interpretability and explainability of deep learning models, and it is currently emerging as a promising research field. it has also attracted research at the intersection of machine learning, information visualization and human-computer interaction (HCI) to build unique solutions with effective human interactions and experience design \cite{Dudley2018}. The growing interest in this field has been reflected in several international conferences and workshops, dedicated exclusively to the topics of interpretability and visualization for machine learning at Visualization for Machine Learning (2018) \cite{visml2018}. These topics has also become the key concerns in panel discussion at premier venues such as NeuRIPS 2016 Workshop on Interpretable ML for Complex Systems \cite{imlcs2016}and ACM Intelligent User Interfaces workshop on Explainable Smart Systems (EXSS 2018) \cite{exss2018}. Besides, there is a growing number of research papers related to visualization and interpretability for deep learning has been published.
-
 \section{Deep Learning Visualization Research}
 
-With the growing complexity of AI models, the critical need for understanding their inner-workings has increased. Visualization is potentially a powerful technique to fill such a critical need. It can help bring more insight into the often obfuscated complex AI systems.
+%With the growing complexity of AI models, the critical need for understanding their inner-workings has increased. Visualization is potentially a powerful technique to fill such a critical need. It can help bring more insight into the often obfuscated complex AI systems.
 
-More than ever, data visualization has become critical to the field of AI. It can potentially help three broad groups of practitioners and users of AI who stand to benefit from deep learning visualization and visual analytics: model developers, model users, and non-experts \cite{Choo2018}.
+Deep learning visualization research is an interdisciplinary area spanning multiple related fields within and outside deep learning and AI community \cite{Choo2018}. In academia, the the primary venue for deep learning visualization research consists of two main groups (1) Information Visualization and Visual Analytics community; and (2) artificial intelligence and deep learning communities. These two groups occasionally also coordinate with human-computer interaction communities, which in turn is a multi-disciplinary field of computer science, cognitive science, human-factor engineering, design and others.
+
+In this section, I discuss the research questions that formed the basis of of research process, and discuss them using the human-centered framework, which is organized around various facets of the deep learning visualization research.
+
+
+
+It can potentially help three broad groups of practitioners and users of AI who stand to benefit from deep learning visualization and visual analytics: model developers, model users, and non-experts \cite{Choo2018}.
 
 Deep learning visualization research is an interdisciplinary area involving both deep learning and visual analytics techniques \cite{Choo2018}. It is distributed across multiple related fields within and outside the deep learning and AI community. In academia, the primary venue for deep learning visualization research consists of two main groups (1) Information Visualization and Visual Analytics community; and (2) artificial intelligence and deep learning communities. 
 
 In addition to that, since this area is relatively new and emerging \cite{Choo2018}, it has seen more attention at multiple conferences and workshops, such as Neural Information Processing Systems (NeurIPS), IEEE Transactions on Visualization, IEEE Information Visualization and Computer Graphics and ICML Workshop on Human Interpretability in ML as just to name a few examples.
-
-\subsection{Information Visualization}
-
-Information visualization is the study and usage of visual representation of abstract data to reinforce human cognition. It can help with the discovery of unstructured actionable insight, exploring and understanding the patterns in the data to communicate essential aspects of your data set in a concise, easy-to-understand fashion.
-
-Data analysis is an indispensable part of the machine learning project pipeline, in both academia and research; and industry projects. The AI development pipeline often begins with data exploration phase, also known as exploratory data analysis to help with data analysis and evaluate approaches for the problem at hand. It has primarily been done using fundamental data analysis approach in visualization such as histograms, plots, charts, graphs and other types.
 
 \subsection{Visual Analytics System}
     
@@ -395,5 +413,5 @@ Visual Analytics combines information visualization and scientific visualization
 Visual Analytics systems have been developed to inspect artificial neural networks since visual feedback is considered highly valuable by both the practitioners and researchers.
 
 ================================================
-Although recent visual analytics systems provide sophisticated visualization and interaction capabilities, research issues on how to effectively loop human into the analysis process and how to increase applicability of explainable deep learning techniques have not been fully investigated. For example, widening user interaction capabilities with deep learning models based on various user needs, tightly integrating the current data-driven learning process with knowledge-driven analysis processes, evaluating and improving the robustness of deep learning against out-of- sample data, as well as explaining other types of popular deep learning models, still pose consid- erable challenges for explainable deep learning
+Although recent visual analytics systems provide sophisticated visualization and interaction capabilities, research issues on how to effectively loop human into the analysis process and how to increase applicability of explainable deep learning techniques have not been fully investigated. For example, widening user interaction capabilities with deep learning models based on various user needs, tightly integrating the current data-driven learning process with knowledge-driven analysis processes, evaluating and improving the robustness of deep learning against out-of- sample data, as well as explaining other types of popular deep learning models, still pose considerable challenges for explainable deep learning
 

@@ -132,7 +132,8 @@
 \usepackage{svg}
 \usepackage{amsmath}
 
-\usepackage{geometry}
+\usepackage[showframe=false]{geometry}
+\usepackage{changepage}
 \usepackage{array, booktabs}
 \usepackage{graphicx}
 \usepackage{xcolor}
