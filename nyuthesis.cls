@@ -578,8 +578,8 @@
     \end{center}
     \begin{singlespace}  % Make sure that we're single spaced
         \ \\  % empty line to create required triple space
-        Major Professor: {\Zmajorprof}\\
-        Department: {\Zdepartmentname}\\
+        Thesis Professor: {\Zmajorprof}\\
+        %Department: {\Zdepartmentname}\\
     \end{singlespace}
     \begin{doublespace}
 }

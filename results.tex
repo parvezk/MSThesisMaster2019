@@ -6,25 +6,17 @@
 
 %%%%%%%%%%%%%
 
-The result section details essential findings from our research study and prototype testing, including multiple iterations and user testing to analyze different variations.
+The result section details essential findings from my research study and prototype testing, including multiple iterations and user testing to analyze different variations.
 
 \section{Visual Analysis}
 
-The critical finding from the research highlights that the representations learned by the VGG16 image recognition model are highly amenable to visualization, in large part because they are representations of visual concepts. Although a wide variety of techniques are under development in the research and visual analytics community, we covered three of the most accessible and useful ones:
+The critical finding from the research highlights that the representations learned by the VGG16 image recognition model are highly amenable to visualization, in large part because they are representations of visual concepts. I used image localization technique and gradient computation to visualize relevance heatmap and activation graph. For both methods, I use the VGG16 model, a convolutional neural network model trained on the imagenet database.
 
-\begin{enumerate}
-\item Visualizing heatmaps of class activation
-\item Visualizing filter patterns
-%\item Visualizing intermediate activations
-\end{enumerate}
-
-For all three methods, we use the VGG16 model, a convolutional neural network based model trained on the imagenet database that we introduced in the previous section.
-
-\section*{Image Receptiveness}
+\section*{Sensitivity Analysis}
 
 This step helps to understand precisely which part of an image identified to belong to a specific class or category (class names known to VGG16), and thus allows localizing objects in images.
 
-We feed the following image of a group of bee-eater sitting on a tree branch as an input image.
+I submit the following image of a group of bee-eater sitting on a tree branch as an input image.
 
 %Input image ~\ref{fig:myFig}.
 \begin{figure}[htbp]
@@ -42,11 +34,11 @@ We feed the following image of a group of bee-eater sitting on a tree branch as 
 \label{fig:heatmap-1}
 \end{figure}
 
-\section*{Activation Graph}
+\section*{Feature Activation Graph}
 
 This step helped to understand when fed with an input image, how successful layers of the network transformed the input image. It also helped get an idea of the meaning of the individual network filters.
 
-Our visualization technique helped to answer two important questions:
+My visualization technique helped to answer two important questions:
 
 \begin{itemize}
 \item  Why did the network think this image contained a bee-eater?
