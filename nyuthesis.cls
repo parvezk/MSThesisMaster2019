@@ -55,76 +55,6 @@
 %  thesis class.
 %
 %  --- Notes ---
-%
-%  Setting the line spacing for the frontmatter to singlespaced is legacy from
-%  the original nyuthesis.sty. At some point it would be nice to change it,
-%  since so much of the frontmatter seems to actually be doublespaced. But I'm
-%  afraid that transition would require a lot of tinkering with the vspace's
-%  and vskip's scattered throughout the frontmatter sections. I don't really
-%  want to tackle that right now.
-%  
-%  --- Revision History ---
-%
-%  Note that this file is a lot more fun to work with if you have an editor
-%  that supports folding, like Jedit or Emacs. Hence all the {{{ }}} pairs. 
-%
-%  History:
-%  2018-08-22  -  Added aerospace  engineering
-%                 option. Type ae in the doccument class instead of
-%                 me.
-%  2018-01-26  -  Added civil and environmental engineering
-%                 option. Type cee in the doccument class instead of
-%                 ce or mae.
-%  2005-02-18  -  Restructured original files into one class 
-%              -  Moved to layout control via setspace.sty and geometry.sty 
-%  2005-02-19  -  Added support for different types of title pages
-%  2005-02-20  -  Added \makeappendix, \makeappendices, and redef'ed \appendix
-%              -  Added \references
-%              -  Consolidated several environment definitions into \newfbmatter
-%              -  Added cite.sty and url.sty as required packages, to improve
-%                 citation and bibliography formatting 
-%  2005-02-23  -  Minor tweaks to "notation" environment
-%  2005-03-03  -  Modified margin settings to ensure 1" bottom margin 
-%  2005-03-04  -  Modified handling of the proposal option
-%              -  Added signature blocks to proposal coversheets 
-%              -  Fixed double spacing of LoT and LoF
-%  2005-08-29  -  Fixes based on feedback from Pat Patterson's dissertation
-%                 1. Reduced computed page count by 1
-%                 2. Removed an extra blank line between "Contents" and the ToC
-%                 3. Tweaked definition of \@chapter to prevent extra blank
-%                    lines from being inserted into LoT and LoF (thanks to
-%                    Dr. Todd Moon for help in tracking down the root cause of 
-%                    this problem
-%                 4. Removed extra blank lines in chapter headings, between 
-%                    "Chapter xxx" and the chapter name, and between the
-%                    chapter name and the body text
-%                 5. Inserted an extra blank line between "References" and the
-%                    reference list
-%  2005-10-25  -  Improved the handling of the page count for the abstract page.
-%                 Now writes the total page count to the .aux file, instead of
-%                 generating an extra blank page at the end of the document.
-%                 Also separated out and clarified the decrements that are
-%                 applied to the page counters to get the final page count.
-%  2005-10-26  -  Cleaned up handling of title page approval block formatting.
-%                 Removed the Grad Dean signature line from the approval
-%                 block for the msreport option (tip of the hat to Mitch 
-%                 Whiteley for pointing out that grad dean approval is 
-%                 unnecessary for Plan B reports.
-%  2006-01-31  -  Setting of 'mae' option now sets the department and degree.
-%  2006-01-31  -  Handling of proposals fixed so that the word 'proposal'
-%                 actually appears on the cover sheet (tip of the hat to 
-%                 Dave Woffinden for the bug report).
-%  2006-07-20  -  Adjusted LoT and LoF to provide single-spacing within entries
-%                 and double-spacing between entries.
-%  2006-07-20  -  Alter page count (again) so that it is precisely frontmatter 
-%                 (including cover page) + mainmatter. This is apparently what 
-%                 the page count is supposed to be.
-%
-% 2012-03-23 - 	Renamed the \year command to fix conflict with TikZ. The command 
-%	 						is now \gradyear
-% v2 2015-10-19	  Changed appearance of References for multi-paper, multi-bib format
-% 2015-10-19	  Changed headers to be all-caps, not bolded, normal size
-%%
 
 %\usepackage{natbib}
 %\bibliographystyle{abbrvnat}
@@ -137,7 +67,6 @@
 \usepackage{array, booktabs}
 \usepackage{graphicx}
 \usepackage{xcolor}
-\usepackage{caption}
 
 \DeclareCaptionFont{blue}{\color{LightSteelBlue3}}
 \newcommand{\foo}{\color{LightSteelBlue3}\makebox[0pt]{\textbullet}\hskip-0.5pt\vrule width 1pt\hspace{\labelsep}}

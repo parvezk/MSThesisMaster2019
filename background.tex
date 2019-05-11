@@ -295,10 +295,10 @@ Causal inference methods focus solely on extracting causal relationships from da
 The research of interpretability investigates how to make sense of what specific feature a network has detected, to what inputs neurons are most receptive to and how does that correlate to the class prediction. We studied existing methods for interpretability, a general approach to how neural network learns and operates internally that considers the magnitude of each detected feature inside hidden layers.
 
 \subsection{Why Interpretability Matters}
-[*] SKIM SLIDE 21
+
 While artificial intelligence (AI) has existed for over sixty years, but the real-world application has increased only in the last decade due to the recent surge in data, rise in computing power and with better algorithms (discussed in above section).
 
-With the growing success of deep learning and neural networks, there is a corresponding need to be able to explain their decisions, which includes detecting model bias, establishing trust and building confidence about how it performs in a real-world situation.
+The role of interpretability in artificial intelligence has gained significant attention in recent years. With the growing success of neural networks, there is a emerging need to be able to explain their decisions, detect model bias and assess these models for potential risk of cultural and social harms in automated system.
 
 \begin{figure}[htbp]
 \centering
@@ -307,19 +307,19 @@ With the growing success of deep learning and neural networks, there is a corres
 \label{fig:Why Interpretability Matters}
 \end{figure}
 
-Without a clear understanding of how and why a model works in a certain way, the development of these models relies on a time consuming trial-and-error process. Consequently, both researchers and practitioners are facing challenges with complex models that demand more transparency and explainable systems to better understanding and analysis of these models. Whether it's an financial decision, a medical decision or maybe a military decision, one cannot rely on a black box method. It's time to act on making these decisions more transparent and understandable before the technology becomes even more pervasive.
+The issue of black box models has been a primary concern and a significant focus of discourse in the last few years not only among researchers and practitioners \cite{Samek} but also among businesses operating in regulated industries, such as credit, insurance, legal and benefit systems. 
 
-The issue of black box neural networks has been a primary concern and a significant focus of discourse in the last few years not only among researchers and practitioners \cite{Samek} but also among businesses operating in regulated industries, such as credit, insurance, legal and benefit systems. 
-
-Over the last few years, algorithmic fairness and accountability has been a matter of concern among consumer advocates, regulators, lawmakers and diversity moderators. An example of this scenario is a 2017 report from the AI Committee of the British Parliament \cite{Hagras2018} that states that the development of the intelligence AI systems is a fundamental necessity if an AI system is to become an integral and trusted tool in the society. Whether it takes the shape of explanation, technological transparency or both depend on the context and stakes involved in its application and sector. However, in most cases, the report makes certain that explainability to be a useful method for the citizens and the consumers. 
+Over the last few years, algorithmic bias and accountability has been a matter of concern among consumer advocates, regulators, lawmakers and diversity moderators. An example of this scenario is a 2017 report from the AI Committee of the British Parliament \cite{Hagras2018} that states that the development of the intelligence AI systems is a fundamental necessity if an AI system is to become an integral and trusted tool in the society. Whether it takes the shape of explanation, technological transparency or both depend on the context and stakes involved in its application and sector. However, in most cases, the report makes certain that explainability to be a useful method for the citizens and the consumers. 
 
 Further, the report upholds that it is not acceptable to implement an artificial intelligence system that could have a substantial impact on an individual's life unless it can provide a comprehensive and satisfactory explanation for the decisions it makes. It means delaying their deployment and use for such cases until the system has been vetted and a credible alternative solution is found.
+
+Without a clear understanding of how and why a model works in a certain way, the development of these models relies on a time consuming trial-and-error process. Consequently, both researchers and practitioners are facing challenges with complex models that demand more transparency and explainable systems to better understanding and analysis of these models. Whether it's an financial decision, a medical decision or maybe a military decision, one cannot rely on a black box method. It's time to act on making these decisions more transparent and understandable before the technology becomes even more pervasive.
 
 As deep learning spreads across domains, it is of paramount importance that we equip users of deep learning with tools for understanding when a model works correctly, when it fails, and ultimately how to improve its performance. As deep learning more pervasive in public domains, it is essential to be able to verify for a certain task that the accuracy results from the proper framing of a problem statement \cite{Liu2017}, and there is no exploitation of artifacts in the data. Techniques for interpreting and understanding what the model has learned have therefore become a key ingredient of a robust validation procedure \cite{taylor2006methods} \cite{hansen2011visual} \cite{bach2015pixel}. Interpretability is critical in applications such as medical diagnosis, credit approvals and self-driving cars, where the dependency of the model on the correct features should be guaranteed \cite{Caruana:2015:IMH:2783258.2788613} \cite{bojarski2017explaining}.
 
 \subsection{Interpretable Methods}
 
-In this section, I briefly discuss the concept of interpretabilty in the context of neural networks and then explore methods for interpreting and understand deep neural networks.
+In this section, I briefly discuss the concept of interpretability in the context of neural networks and then explore methods for interpreting and understand deep neural networks.
 
 Interpretability is defined as the point to which a human can understand the causes of a decision. Another definition is that interpretability is the degree to which a human can consistently predict the model’s result \cite{molnar}. The higher the interpretability of a machine learning model, the easier it is for someone to understand why certain decisions have been made. A model is better interpretable when its decisions are more accessible for a human to comprehend than decisions made by them \cite{molnar}.
 
@@ -339,17 +339,18 @@ Visual Analytics combines information visualization and scientific visualization
 
 \subsection{Visualization and Interpretability}
 
-In this section, I highlight the importance of interactive visualization in the neural network interpretability and discuss some key initiatives in deep learning visualizations.
-[*] SLIDE 26 and 27
+In this section, I highlight the importance of interactive visualization in the neural network interpretability and discuss some key initiatives in deep learning visualizations. 
 
-With the growing complexity of AI models and the critical need for understanding their inner-workings has increased. Visualization is potentially a powerful tool to fill this critical need. It can be used to explain the rationales of an AI decisions, including building confidence about how they will behave in the real-world, detecting bias and prejudice, and also for scientific curiosity.
+With the growing complexity of AI models and the critical need for understanding their inner-workings has increased. Visualization is potentially a powerful tool to fill this critical need. It can be used to explain the rationales of an AI decisions, including building trust and confidence about how they will behave in the real-world and detecting bias in the model and data.
 
 Visualization can played an important role in enhancing the interpretability and explainability of the deep learning models. It provide an in-depth understanding of how deep learning models work. Combined with XAI explanation approach, it can help bring more insight into the often obfuscated complex AI system. It can be used to explain how AI techniques work and help demystify the training and inference process of the model.
+Visualization and machine learning interpretability share a common goal of providing human insight from data and deal with hard to quantify values.
 
 Visualizing and interpreting neural network through visualization is currently emerging as a promising research field. it has also attracted research at the intersection of machine learning, information visualization and human-computer interaction (HCI) to build unique solutions with effective human interactions and experience design \cite{Dudley2018}. The growing interest in this field has been reflected in several international conferences and workshops, dedicated exclusively to the topics of interpretability and visualization for machine learning at Visualization for Machine Learning (2018) \cite{visml2018}. These topics has also become the key concerns in panel discussion at premier venues such as NeuRIPS 2016 Workshop on Interpretable ML for Complex Systems \cite{imlcs2016}and ACM Intelligent User Interfaces workshop on Explainable Smart Systems (EXSS 2018) \cite{exss2018}. Besides, there is a growing number of research papers related to visualization and interpretability for deep learning has been published.
 
 \subsection{Explainable Artificial Intelligence}
-Explainable Artificial Intelligence (XAI) is a concept that explains decisions made by the machine learning models and provide justification in a way interpretable by humans \cite{Gunning}. It enables understanding of overall strengths and weaknesses, and conveys an understanding of how the system will behave when implemented in future and how to correct the system’s mistakes \cite{Gunning}.
+
+The interest in interpretability and transparency has lead to an emerging field of research called Explainable Artificial Intelligence (XAI). XAI is a concept that explains decisions made by the machine learning models and provide justification in a way interpretable by humans \cite{Gunning}. It enables understanding of overall strengths and weaknesses, and conveys an understanding of how the system will behave when implemented in future and how to correct the system’s mistakes \cite{Gunning}.
 
 \begin{figure}[htbp]
 \centering
@@ -427,7 +428,7 @@ Visualization after training has been used to discern feature visualization \cit
 
 \subsection*{Who would use deep learning visualization?}
 
-It can potentially help three broad groups of practitioners and users of AI who stand to benefit from deep learning visualization and visual analytics: model developers, model users, and non-experts \cite{Choo2018}.
+It can potentially help three broad groups of practitioners and users of AI who stand to benefit from deep learning visualization and visual analytics: model developers, model users, and non-specialists \cite{Choo2018}.
 
 %With the growing complexity of AI models, the critical need for understanding their inner-workings has increased. Visualization is potentially a powerful technique to fill such a critical need. It can help bring more insight into the often obfuscated complex AI systems.
 

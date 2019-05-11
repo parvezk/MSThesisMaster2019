@@ -33,7 +33,7 @@ Typically a neural network is provided with an instance, for example, an image o
 
 My analysis of previous work suggest that deeper representation in a CNN capture high level abstracts or visual concepts \cite{Zeiler}. More importantly convolutional layers naturally retain the spatial information of the input data which is otherwise lost in the fully connected layers. Thus I expect the last convolutional layer to retain better features, which is balanced between spatial information and class semantics. The neurons in the last convolutional layer mostly observe the class specific information in the image, such as object parts. Therefore, I use gradient descent to compute the gradient of the activation output of the last convolutional layer in CNN to understand the importance of each neuron for a class of interest. We use relevance heatmap visualization to highlight the importance of each neuron (channel or filter) and its correlation to the prediction made by the model.
 
-Building upon this assumption, we formally setup our hypothesis as follows: Apply image localization and object detection technique for visualizing what part of an input image attributed most to the classification decision by the model. In other words, localization is useful to study which pixels in a given input has high activations or to what input neurons are most receptive to and how does that correlate to the class prediction.
+Building upon this assumption, we formally setup our hypothesis as follows: Apply image localization and object detection technique to distinguish what part of an input image attributed most to the classification decision by the model. In other words, localization is a useful method to study which pixels in a given input has high activations or to what input neurons are most receptive to and how does that correlate to the class prediction.
 
 Finally, with the growing complexity of the deep learning model, the critical need for understanding its inner working has increased. I postulate interactive visualization is a potentially a powerful techniques to fill such a critical need. It can be used to deconstruct the problem of black-box system and able to inspect what features the network has learned, patterns discovered by filters and uncover other hidden structures in the data.
 
@@ -61,7 +61,7 @@ The prototype is intended and designed for people with a non-technical backgroun
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=1\textwidth]{images/DeepViz001.png}
+\includegraphics[width=0.75\textwidth]{images/DeepViz001.png}
 \caption{Visual Explanation Tool}
 \label{fig:DeepViz - Visual Explanation Tool}
 \end{figure}
@@ -74,7 +74,7 @@ Firstly, When an image is submitted, DeepViz predicts a class label and then sho
 
 \begin{figure}[htbp]
 \centering\textbf{}
-\includegraphics[width=0.9\textwidth]{images/method-schema-copy.eps}
+\includegraphics[width=1\textwidth]{images/method-schema-copy.eps}
 \caption{Design Approach}
 \label{fig:design-approach}
 \end{figure}
@@ -88,9 +88,6 @@ Sensitivity Analysis visualizes a heatmap of the activation output corresponding
 For instance, when an image is submitted, the model predicts the class. The input image is correctly classified as "bee-eater". In order to understand why the model arrived at this decision, the tool generates a heatmap that visualizes the importance of each pixel in the input image for the prediction of that class. In this example, the bee-eater's beak and the neck are the basis for the model's decision. With the heatmap,user can verify that the model works as intended.
 
 The tool uses localization to know what region in the image attributed most to the classification decision. This helps identify individual pixels in the input image that had the highest activations. Localization, in the context of CNN, is a task to localize objects in images using only whole image class labels. It indicates where the model has to look to make a specific decision. It identifies pixels which are pivotal for the prediction object.
-
-[*][Expand with discussion of how this helps to show where and why AI might be bias] 
-In another instance, another example image is fed to the tool. The model predicts the class. the input image is misclassified as "hare", when the true label is cat. The user can see why it predicted a wrong label by inspecting the heatmap. Here, the model detected only the tail region and omitted other parts of the cat image, hence the feature extraction was not correct.
 
 I use Class Activation Mapping approach (CAM) to obtain the localization map. I focused on the output of the last convolutional layer because it detects the high level features and differential to the predicted class. Therefore, I computed the value of the activation output of the last convolutional layer, and then computed the gradient of the probability score of the class with respect to the logits or activation output of the last convolutional layer. This step helps capture the importance of the feature map for a targeted class. The gradient value is pooled within each filter by taking the global average mean. The resulting value is then multiplied with the activation output of the last convolutional layer for the weighted combination. The resulting value is averaged and all the filters are collapsed to create a heatmap vector. This is followed by ReLU (Rectified Linear Unit) activation in order to discard the negative values from the heatmap and normalize them. The heatmap vector is resized to match the size of the input image. An RGB colormap is applied to the heatmap vector to transform the 1-channel greyscale image into a color image. Then the color heatmap is overlaid on top of the input image to form the final output.
 
@@ -122,10 +119,9 @@ However, there is a debate on the feasibility and effectiveness of the web-based
 I analyzed the modern browser support for machine learning tasks and taken into consideration the factors that may affect the efficiency when building and deploying deep learning application on the web. One of them is the debugging capability to support model and data inspection when running deep learning tasks.
 
 Further, in-browser deep learning allows users to use local data and then train the model directly in the browser, meaning there is no back-end end or server is necessary. 
-
 \subsection{Model Selection}
-[*][Need more introduction+ explanation]
-As model selection is the centerpiece of the data science workflow, I evaluated a set of candidate pre-trained models by running a series of study and experiments. This also helped assess if the data collected for inference is suited to the problem of model selection. I taken into account the hyperparameter setting and other configuration details required to evaluate during the inference process if required. We tested the compatibility of the model with the available dataset. Based on my evaluation and inital experiments, I selected VGG-16 as the primary model for the prototyping phase.
+
+As the model selection is the centerpiece of the data science workflow, I evaluated a set of candidate pre-trained models for my classification project by running a series of study and experiments. Specifically, I created a special Python script that can load any of these pre-trained network architectures from disk using Keras, and then classify a set of sample images. I ran the experiments on models namely, MobileNet, Inception V1, Inception V3, VGG16 and VGG19 and compared them in terms of performance, accuracy, network architecture and size of the learned parameters. VGG16 and VGG19 have better accuracy than other models and both are trained on ImageNet database. The “16” and “19” stand for the number of hidden layers in the network. Due to their depth and number of fully connected units, VGG16 is 533MB and VGG19 is 574MB in size. This experiment also helped assess if the data collected for inference is suitable for the classification task. I took into account the hyperparameter setting and other configuration details required to evaluate during the inference process if required. We tested the compatibility of the model with the available dataset. Based on my evaluation and initial experiments, I selected VGG-16 as the primary model for the prototyping phase.
 
 A schematic view of Visual Geometry Group 16 Model.~\ref{fig:CNN-1}.
 \begin{figure}[htbp]
