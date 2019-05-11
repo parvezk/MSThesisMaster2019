@@ -1,6 +1,6 @@
 %  -- nyuthesis --
 % 
-%  A LaTeX class for the preparation of USU thesis' and dissertations.
+%  A LaTeX class for the preparation of NYU thesis' and dissertations.
 % 
 %  Time-stamp: "[nyuthesis.cls] last modified by Scott Budge (scott) on 2019-01-17 (Thursday, 17 January 2019) at 16:23:44 on goga.ece.usu.edu"
 %
@@ -51,18 +51,55 @@
 %  class maintained by Dr. Scott Budge and Dr. Todd Moon. That class was in 
 %  turn based on a combination of the standard LaTeX book.cls, and a thesis
 %  style file originating at Colorado State University. Also makes use of a
-%  variety of ideas from Mark Senn's puthesis.cls Purdue University 
+%  variety of ideas from Mark Senn's puthesis.cls Purdue Univecaptionrsity 
 %  thesis class.
 %
 %  --- Notes ---
 
+%{{{ Packages
+
+%\usepackage{flafter}           % Cause floats to appear after
+                               % environment.
+%\usepackage{siunitx}           % Provides standard formatting of SI units.
+
+% Include TikZ and PGF packages for high-quality graphics, schematics
+% and plots. This is optional; at the current time, when run with
+% latex to create a .dvi file, the xdvi viewer will produce incorrect
+% formatting for the TikZ figures.  If the .dvi file is converted to
+% pdf using "dvipdf" the resulting pdf file is correct.  If this
+% example is used with  pdflatex, the resulting TikZ figures in the
+% output look fine.
+\usepackage{tikz}       		% The base tikz+pgf package
+\usetikzlibrary{arrows,shapes}	% Optional tikz extensions
+\usepackage[american]{circuitikz}	% TikZ-based package for schematic drawings
+\usepackage{pgfplots}			% Tikz-based package for making plots 
+\pgfplotsset{compat=1.6}        % This *might* be necessary for your
+                                % version of pgfplots.
+
+\usepackage{hyperref} % Creates hyperlinks within document
+\hypersetup{colorlinks=true, linkcolor=blue,
+  citecolor=blue,urlcolor=blue} % Use when compiling the digital copy
+% \hypersetup{colorlinks=true, linkcolor=black,
+% citecolor=black,urlcolor=black} % Use when compiling the printed copy
+
+% The following allows for hyperlinked DOIs to be inserted in the
+% manuscript by using \doi{}.
+\usepackage{doi}
+
+% Set spacing around figures and tables to triple space
+\setlength{\intextsep}{2em} % Vertical space above & below [h] floats
+\setlength{\textfloatsep}{2em} % Vertical space below (above) [t] ([b]) floats
+
+\usepackage[utf8]{inputenc}
+\usepackage[TS1,T1]{fontenc}
+\usepackage{fourier, heuristica}
+
+%}}}
+
 %\usepackage{natbib}
 %\bibliographystyle{abbrvnat}
-
-\usepackage{svg}
-\usepackage{amsmath}
-
-\usepackage[showframe=false]{geometry}
+\usepackage{amssymb}           % add ams symbols stuff
+\usepackage{url}
 \usepackage{changepage}
 \usepackage{array, booktabs}
 \usepackage{graphicx}
