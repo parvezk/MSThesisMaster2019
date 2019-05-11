@@ -67,6 +67,7 @@
 \usepackage{array, booktabs}
 \usepackage{graphicx}
 \usepackage{xcolor}
+\usepackage{caption}
 
 \DeclareCaptionFont{blue}{\color{LightSteelBlue3}}
 \newcommand{\foo}{\color{LightSteelBlue3}\makebox[0pt]{\textbullet}\hskip-0.5pt\vrule width 1pt\hspace{\labelsep}}
