@@ -47,7 +47,7 @@ Besides model complexity, the problem of trust and transparency has been receivi
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.90\textwidth]{images/xai-1.eps}
+\includegraphics[width=0.85\textwidth]{images/xai-1.eps}
 \caption{Explanation Approach}
 \label{fig:explanation-approach}
 \end{figure}
@@ -61,7 +61,7 @@ The prototype is intended and designed for people with a non-technical backgroun
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.75\textwidth]{images/DeepViz001.png}
+\includegraphics[width=0.90\textwidth]{images/DeepViz001.png}
 \caption{Visual Explanation Tool}
 \label{fig:DeepViz - Visual Explanation Tool}
 \end{figure}
@@ -74,7 +74,7 @@ Firstly, When an image is submitted, DeepViz predicts a class label and then sho
 
 \begin{figure}[htbp]
 \centering\textbf{}
-\includegraphics[width=1\textwidth]{images/method-schema-copy.eps}
+\includegraphics[width=0.80\textwidth]{images/method-schema-copy.eps}
 \caption{Design Approach}
 \label{fig:design-approach}
 \end{figure}
@@ -123,11 +123,10 @@ Further, in-browser deep learning allows users to use local data and then train 
 
 As the model selection is the centerpiece of the data science workflow, I evaluated a set of candidate pre-trained models for my classification project by running a series of study and experiments. Specifically, I created a special Python script that can load any of these pre-trained network architectures from disk using Keras, and then classify a set of sample images. I ran the experiments on models namely, MobileNet, Inception V1, Inception V3, VGG16 and VGG19 and compared them in terms of performance, accuracy, network architecture and size of the learned parameters. VGG16 and VGG19 have better accuracy than other models and both are trained on ImageNet database. The “16” and “19” stand for the number of hidden layers in the network. Due to their depth and number of fully connected units, VGG16 is 533MB and VGG19 is 574MB in size. This experiment also helped assess if the data collected for inference is suitable for the classification task. I took into account the hyperparameter setting and other configuration details required to evaluate during the inference process if required. We tested the compatibility of the model with the available dataset. Based on my evaluation and initial experiments, I selected VGG-16 as the primary model for the prototyping phase.
 
-A schematic view of Visual Geometry Group 16 Model.~\ref{fig:CNN-1}.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=1\textwidth]{images/cnn-vgg16-1.png}
-\caption{VGG16 hidden layers}
+\caption{A schematic view of Visual Geometry Group 16 Model}
 \label{fig:CNN-1}
 \end{figure}
 

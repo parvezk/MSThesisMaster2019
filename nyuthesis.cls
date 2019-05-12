@@ -90,10 +90,6 @@
 \setlength{\intextsep}{2em} % Vertical space above & below [h] floats
 \setlength{\textfloatsep}{2em} % Vertical space below (above) [t] ([b]) floats
 
-\usepackage[utf8]{inputenc}
-\usepackage[TS1,T1]{fontenc}
-\usepackage{fourier, heuristica}
-
 %}}}
 
 %\usepackage{natbib}
@@ -498,7 +494,7 @@
 % "begin of environment" definition
 {
     \newpage
-    \null \vskip 26pt  
+    \null \vskip 16pt  
     \addcontentsline{toc}{chapter}{\textnormal{PUBLIC ABSTRACT}}
     \begin{center}
         PUBLIC ABSTRACT\\
@@ -525,7 +521,7 @@
 % beginning definition
 {
     \newpage
-    \null \vskip 26pt  
+    \null \vskip 16pt  
     \addcontentsline{toc}{chapter}{\textnormal{ABSTRACT}}
     \begin{center}
         ABSTRACT\\

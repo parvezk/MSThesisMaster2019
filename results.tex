@@ -67,6 +67,7 @@ To take this a step further, I breakdown the attention map at layer level to vis
 \begin{figure}
      \centering
      \caption{Layer-wise Relevance Heatmap}
+     \vspace{1em}
      \begin{subfigure}[b]{0.30\textwidth}
          \centering
          \includegraphics[width=\textwidth]{images/hm-layer-5.png}
@@ -97,7 +98,7 @@ To take this a step further, I breakdown the attention map at layer level to vis
     
     \label{fig:three graphs}
     
-    \vspace{1em}%
+    \vspace{.5em}%
     \includegraphics[width=0.35\textwidth]{images/hm-layer-17.png}
     \vspace{1em}%
     \caption{Final Layer Visualization}
@@ -113,6 +114,7 @@ DeepViz visualizes activation output of the intermediate layers as a directed ac
 This visualization helps the user understand how successive layers of the network transform the input image. Visualizing intermediate activations helps display the feature maps produced by various convolution and pooling layers in the network. User can see that nodes in the first layer mainly detects edges, where activations are retaining most of the information from the input image. As it moves deeper, the activations become highly abstract and far less visually interpretable. This is due to the network focusing on the higher level concepts like a dog's ear or bird's beak. These high-level activations carry less spatial information about the image and more class-specific information. This shows how the input image is continuously transformed at intermediate layers to distill out irrelevant information and retain useful information specific to the target class.
 
 In summary, DeepViz visualization helped to answer two important questions:
+\vspace{-1em}
 \begin{itemize}
 \item  Why did the network think this image contained a bee-eater bird?
 \vspace{-1em}
@@ -130,6 +132,7 @@ Having established that, next I evaluated whether the visualization can lead an 
 \begin{figure}
      \centering
      \caption{User Testing Example of Correct and Incorrect Classification}
+     \vspace{1em}
      \begin{subfigure}[b]{0.30\textwidth}
          \centering
          \includegraphics[width=\textwidth]{images/seashore.jpeg}
