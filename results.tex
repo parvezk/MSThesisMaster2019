@@ -38,10 +38,10 @@ The critical finding from the research highlights that the representations learn
 
 DeepViz tool produces relevance heatmap as visual evidence to the class prediction that justifies the target class by highlighting the discriminating region corresponding to the desired class clearly. This method is useful to understand precisely which part of an image identified to belong to a specific class or category (class names known to VGG16), and thus allows localizing objects in images.
 
-Figure 3.4 shows sample explanation which first declares a predicted class label, which is correctly classified as "bee-eater", followed by relevance heatmap to elucidate why the model arrived at this decision. The relevance heatmap visualizes the importance of each pixel in the given image inconsistent with the predicted class. In this example, the bee-eater's beak and the neck are the basis for the model's decision. With the heatmap, the user can verify that the model works as intended.  This step validated the first premise of my hypothesis: Apply image localization and object detection technique to distinguish what part of an input image attributed most to the classification decision.
+Figure 3.4 shows the sample explanation which first declares a predicted class label, which is correctly classified as "bee-eater", followed by relevance heatmap to elucidate why the model arrived at this decision. The relevance heatmap visualizes the importance of each pixel in the given image inconsistent with the predicted class. In this example, the bee-eater's beak and the neck are the basis for the model's decision. With the heatmap, the user can verify that the model works as intended.  This step validated the first premise of my hypothesis: Apply image localization and object detection technique to distinguish what part of an input image attributed most to the classification decision.
 %The localized section of the image and intensity of filter activation are consistent in this case.
 
-To examine instances where the incorrect label is predicted and identify what mistake a network is making, I collected a set of images that the VGG16 model fails to classify correctly. In this instance, when an example image is served to the tool seen in Figure 4.2. The model predicts the incorrect class. The input image is misclassified as "hare", when the correct label is a cat. The user can see why it predicted a wrong label by inspecting the heatmap visualization. Here, the model detected only the tail region and omitted other parts of the cat image, hence the feature extraction was not correct.
+To examine instances where the incorrect label is predicted and identify what mistake a network is making, I collected a set of images that the VGG16 model fails to classify correctly. In this instance, when an example image is served to the tool seen in Figure 4.2. The model predicts the incorrect class. The input image is misclassified as "hare" when the correct label is a cat. The user can see why it predicted a wrong label by inspecting the heatmap visualization. Here, the model detected only the tail region and omitted other parts of the cat image, hence the feature extraction was not correct.
 
 \begin{figure}
      \centering
@@ -113,7 +113,7 @@ DeepViz visualizes activation output of the intermediate layers as a directed ac
 
 This visualization helps the user understand how successive layers of the network transform the input image. Visualizing intermediate activations helps display the feature maps produced by various convolution and pooling layers in the network. User can see that nodes in the first layer mainly detects edges, where activations are retaining most of the information from the input image. As it moves deeper, the activations become highly abstract and far less visually interpretable. This is due to the network focusing on the higher level concepts like a dog's ear or bird's beak. These high-level activations carry less spatial information about the image and more class-specific information. This shows how the input image is continuously transformed at intermediate layers to distill out irrelevant information and retain useful information specific to the target class.
 
-In summary, DeepViz visualization helped to answer two important questions:
+In summary, DeepViz visualization helped answer two important questions:
 \vspace{-1em}
 \begin{itemize}
 \item  Why did the network think this image contained a bee-eater bird?
@@ -195,13 +195,13 @@ Having established that, next I evaluated whether the visualization can lead an 
 \end{figure}
 
 
-
-%TRUST
+\iffalse % ----- START THE CUT ---------
 %Given two prediction explanations, we want to evaluate; which seems more trustworthy
 %Thus our visualization can help users place trust in a model that can generalize better, just based on individual prediction explanations.
-%we select images from VOC 2007 val set that contain exactly two annotated categories and create vi- sualizations for each one of them
+%we select images from VOC 2007 val set that contain exactly two annotated categories and create visualizations for each one of them
 %
 %We compare generated explanations and definitions. All explanations on the left include an attribute which is not present on the image on the right. In contrast to definitions, our explanation model can adjust its output based on visual evidence. (Color figure online) 
 %Incorrect Prediction. We qualitatively examine explanations for instances where the incorrect label is predicted (Fig. 8). In these scenarios, explanations are frequently image relevant and mention features common in both the image instance and the predicted class. For example, in the first row of Fig. 8 the model mistakes the “Laysan Albatross” for the “Cactus Wren”. The explanation text
 %includes many features also mentioned in the “Cactus Wren” definition (for example color and the spotted feathers) and is relevant to the image.
 %We compare generated explanations and definitions. All explanations on the left include an attribute which is not present on the image on the right. In contrast to definitions, our explanation model can adjust its output based on visual evidence.
+\fi % ---------- END THE CUT -----------

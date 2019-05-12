@@ -1,16 +1,59 @@
 %
-%  --- NYU thesis and dissertation template ---
+%  --- USU thesis and dissertation template ---
 %
 
 \documentclass[ee,dissertation,x11names,table]{nyuthesis}
-
+%{{{ Packages
+\usepackage{amssymb}           % add ams symbols stuff
+\usepackage{graphicx}          % add graphics
 %\usepackage{subfigure}
-\usepackage{subcaption}
+\usepackage{url}
+\usepackage{ragged2e}
 
-%\usepackage[utf8]{inputenc}
-%\usepackage[TS1,T1]{fontenc}
-%\usepackage{fourier, heuristica}
-%\usepackage{fourier}
+\usepackage{subcaption}
+%\usepackage{flafter}           % Cause floats to appear after
+                               % environment.
+%\usepackage{siunitx}           % Provides standard formatting of SI units.
+
+% Include TikZ and PGF packages for high-quality graphics, schematics
+% and plots. This is optional; at the current time, when run with
+% latex to create a .dvi file, the xdvi viewer will produce incorrect
+% formatting for the TikZ figures.  If the .dvi file is converted to
+% pdf using "dvipdf" the resulting pdf file is correct.  If this
+% example is used with  pdflatex, the resulting TikZ figures in the
+% output look fine.
+\usepackage{tikz}       		% The base tikz+pgf package
+\usetikzlibrary{arrows,shapes}	% Optional tikz extensions
+\usepackage[american]{circuitikz}	% TikZ-based package for schematic drawings
+\usepackage{pgfplots}			% Tikz-based package for making plots 
+\pgfplotsset{compat=1.6}        % This *might* be necessary for your
+                                % version of pgfplots.
+
+\usepackage{hyperref} % Creates hyperlinks within document
+\hypersetup{colorlinks=true, linkcolor=blue,
+  citecolor=blue,urlcolor=blue} % Use when compiling the digital copy
+% \hypersetup{colorlinks=true, linkcolor=black,
+% citecolor=black,urlcolor=black} % Use when compiling the printed copy
+
+% The following allows for hyperlinked DOIs to be inserted in the
+% manuscript by using \doi{}.
+\usepackage{doi}
+
+% Set spacing around figures and tables to triple space
+\setlength{\intextsep}{2em} % Vertical space above & below [h] floats
+\setlength{\textfloatsep}{2em} % Vertical space below (above) [t] ([b]) floats
+
+% The following is added if you are using the multiple-paper format to
+% add references after each chapter:
+%\usepackage[sectionbib]{chapterbib}
+
+%}}}
+
+\usepackage[utf8]{inputenc}
+\usepackage[TS1,T1]{fontenc}
+\usepackage{fourier, heuristica}
+
+\justifying
 
 % Author and Title Information
 \author{Parvez A. Kose}
@@ -39,21 +82,23 @@
 \begin{document}
     %{{{ Frontmatter
     \preliminaries   % set frontmatter style
-    \include{front-matter/coverpage}
-    \include{front-matter/titlepage}
-    \include{front-matter/signature}
+    \include{frontmatter/coverpage}
+    \include{frontmatter/titlepage}
+    %\include{frontmatter/signature}
     %\maketitle
     %\makecopyright        % optional
     
-    \include{front-matter/abstract}
-    \include{front-matter/publicabstract}
+    \include{frontmatter/abstract}
+    \include{frontmatter/publicabstract}
     %\include{dedication}  % optional 
-    \include{front-matter/acknowl}     % optional
+    \include{frontmatter/acknowl}     % optional
+    
     \tableofcontents 
     \listoftables 
     \listoffigures
+    
 %    \include{notation}  % optional
-    \include{front-matter/acronyms}  % optional  
+    \include{acronyms}  % optional  
     %}}}
     %{{{ The main body of the thesis
     \body  % set main body style
