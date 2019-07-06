@@ -1,6 +1,6 @@
 %  -- nyuthesis --
 % 
-%  A LaTeX class for the preparation of USU thesis' and dissertations.
+%  A LaTeX class for the preparation of NYU thesis' and dissertations.
 % 
 %  Time-stamp: "[nyuthesis.cls] last modified by Scott Budge (scott) on 2019-01-17 (Thursday, 17 January 2019) at 16:23:44 on goga.ece.usu.edu"
 %
